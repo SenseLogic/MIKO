@@ -1,0 +1,74 @@
+{
+    "title":
+        ‴About us
+        ¨fr:À propos de nous
+        ¨de:Über uns
+        ¨es:Sobre nosotros
+        ¨pt:Sobre nós‴,
+    "text":
+        ‴Lorem ipsum
+        ¨fr:Lorem ipsum
+        ¨de:Lorem ipsum
+        ¨es:Lorem ipsum
+        ¨pt:Lorem ipsum‴,
+    "storyTitle":
+        ‴Our Story
+        ¨fr:Notre histoire
+        ¨de:Unsere Geschichte
+        ¨es:Nuestra historia
+        ¨pt:A nossa história‴,
+    "storyText1":
+        ‴Miko Project was founded with a simple mission: to provide high-quality footwear that combines style, comfort, and durability. We believe that everyone deserves to walk in shoes that make them feel confident and comfortable.
+        ¨fr:Miko Project a été fondé avec une mission simple : offrir des chaussures de haute qualité alliant style, confort et durabilité. Nous croyons que chacun mérite de marcher dans des chaussures qui lui donnent confiance et confort.
+        ¨de:Miko Project wurde mit einer einfachen Mission gegründet: hochwertiges Schuhwerk anzubieten, das Stil, Komfort und Haltbarkeit vereint. Wir glauben, dass jeder in Schuhen gehen verdient, die ihm Selbstvertrauen und Wohlbefinden geben.
+        ¨es:Miko Project se fundó con una misión sencilla: ofrecer calzado de alta calidad que combina estilo, comodidad y durabilidad. Creemos que todos merecen caminar con zapatos que les transmitan confianza y comodidad.
+        ¨pt:A Miko Project foi fundada com uma missão simples: oferecer calçado de alta qualidade que combine estilo, conforto e durabilidade. Acreditamos que todos merecem calçar sapatos que os façam sentir confiantes e confortáveis.‴,
+    "storyText2":
+        ‴Since our inception, we've been committed to sourcing the best shoes from trusted brands around the world, ensuring our customers have access to the latest trends and timeless classics.
+        ¨fr:Depuis notre création, nous nous engageons à sélectionner les meilleures chaussures auprès de marques de confiance du monde entier, pour que nos clients aient accès aux dernières tendances et aux classiques intemporels.
+        ¨de:Seit unserer Gründung beschaffen wir die besten Schuhe von vertrauenswürdigen Marken weltweit, damit unsere Kunden Zugang zu den neuesten Trends und zeitlosen Klassikern haben.
+        ¨es:Desde nuestros inicios, nos comprometemos a seleccionar el mejor calzado de marcas de confianza de todo el mundo, para que nuestros clientes tengan acceso a las últimas tendencias y a los clásicos atemporales.
+        ¨pt:Desde o início, comprometemo-nos a selecionar o melhor calçado de marcas de confiança em todo o mundo, garantindo que os nossos clientes tenham acesso às últimas tendências e aos clássicos intemporais.‴,
+    "valuesTitle":
+        ‴Our Values
+        ¨fr:Nos valeurs
+        ¨de:Unsere Werte
+        ¨es:Nuestros valores
+        ¨pt:Os nossos valores‴,
+    "value1Title":
+        ‴Quality First
+        ¨fr:La qualité avant tout
+        ¨de:Qualität zuerst
+        ¨es:La calidad primero
+        ¨pt:Qualidade em primeiro lugar‴,
+    "value1Description":
+        ‴We never compromise on quality. Every shoe in our collection meets our strict standards for durability and craftsmanship.
+        ¨fr:Nous ne transigeons jamais sur la qualité. Chaque chaussure de notre collection respecte nos exigences strictes en matière de durabilité et de savoir-faire.
+        ¨de:Wir gehen keine Kompromisse bei der Qualität ein. Jeder Schuh in unserer Kollektion erfüllt unsere strengen Anforderungen an Haltbarkeit und Verarbeitung.
+        ¨es:Nunca comprometemos la calidad. Cada zapato de nuestra colección cumple nuestros estrictos estándares de durabilidad y artesanía.
+        ¨pt:Nunca comprometemos a qualidade. Cada sapato da nossa coleção cumpre os nossos rigorosos padrões de durabilidade e artesanato.‴,
+    "value2Title":
+        ‴Customer Satisfaction
+        ¨fr:Satisfaction client
+        ¨de:Kundenzufriedenheit
+        ¨es:Satisfacción del cliente
+        ¨pt:Satisfação do cliente‴,
+    "value2Description":
+        ‴Your happiness is our priority. We're here to help you find the perfect pair of shoes and ensure you're completely satisfied.
+        ¨fr:Votre satisfaction est notre priorité. Nous sommes là pour vous aider à trouver la paire idéale et garantir votre entière satisfaction.
+        ¨de:Ihre Zufriedenheit hat für uns Priorität. Wir helfen Ihnen, das perfekte Paar zu finden und sorgen dafür, dass Sie vollständig zufrieden sind.
+        ¨es:Su felicidad es nuestra prioridad. Estamos aquí para ayudarle a encontrar el par perfecto y garantizar su completa satisfacción.
+        ¨pt:A sua satisfação é a nossa prioridade. Estamos aqui para o ajudar a encontrar o par perfeito e garantir que fica completamente satisfeito.‴,
+    "value3Title":
+        ‴Innovation
+        ¨fr:Innovation
+        ¨de:Innovation
+        ¨es:Innovación
+        ¨pt:Inovação‴,
+    "value3Description":
+        ‴We stay ahead of trends and continuously improve our selection to bring you the latest in footwear technology and design.
+        ¨fr:Nous anticipons les tendances et enrichissons continuellement notre sélection pour vous offrir le meilleur de la technologie et du design chaussant.
+        ¨de:Wir bleiben Trends voraus und erweitern unsere Auswahl kontinuierlich, um Ihnen das Neueste in Schuhtechnologie und Design zu bieten.
+        ¨es:Nos anticipamos a las tendencias y mejoramos continuamente nuestra selección para ofrecerle lo último en tecnología y diseño de calzado.
+        ¨pt:Antecipamo-nos às tendências e melhoramos continuamente a nossa seleção para lhe trazer o melhor em tecnologia e design de calçado.‴
+}

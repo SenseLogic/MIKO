@@ -1,0 +1,48 @@
+// -- MIXINS
+
+buttonStyle( backgroundColorValue, textColorValue = white )
+
+    border: none;
+    border-radius: siteBorderRadius;
+    padding: siteButtonPadding;
+
+    background-color: backgroundColorValue;
+
+    font-weight: 600;
+    color: textColorValue;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+// ~~
+
+buttonStyleHover()
+
+    transform: translateY( -0.125rem );
+
+    box-shadow: boxShadow;
+
+// ~~
+
+buttonStyleActive()
+
+    transform: translateY( 0 );
+
+// ~~
+
+flexCenter()
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+// ~~
+
+cardStyle()
+
+    margin: 1rem 0;
+    border-radius: siteBorderRadius;
+    padding: 1.5rem;
+
+    background: whiteColor;
+    box-shadow: boxShadow;

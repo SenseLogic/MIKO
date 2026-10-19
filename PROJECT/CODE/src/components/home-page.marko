@@ -1,0 +1,83 @@
+// -- IMPORTS
+
+import { getLocalizedText } from "senselogic-lingo";
+import FooterMenu from "./footer-menu.marko";
+import HeaderMenu from "./header-menu.marko";
+import type { PageViewData } from "../lib/application_data";
+
+// -- TYPES
+
+export interface Input {
+    pageData: PageViewData;
+}
+
+<HeaderMenu pageData=input.pageData/>
+<div class="home-page">
+    <section class="home-page-hero">
+        <div class="home-page-hero-container">
+            <div class="home-page-hero-content">
+                <h1 class="home-page-hero-title">
+                    ${getLocalizedText( input.pageData.homePage.title as string, input.pageData.languageTag )}
+                </h1>
+                <p class="home-page-hero-subtitle">
+                    ${getLocalizedText( input.pageData.homePage.heroSubtitle as string, input.pageData.languageTag )}
+                </p>
+                <div class="home-page-hero-actions">
+                    <a
+                        href=`/${ input.pageData.languageTag }/products`
+                        class="home-page-hero-button home-page-hero-button-primary"
+                    >
+                        ${getLocalizedText( input.pageData.homePage.shopNowButton as string, input.pageData.languageTag )}
+                    </a>
+                    <a
+                        href=`/${ input.pageData.languageTag }/about`
+                        class="home-page-hero-button home-page-hero-button-secondary"
+                    >
+                        ${getLocalizedText( input.pageData.homePage.learnMoreButton as string, input.pageData.languageTag )}
+                    </a>
+                </div>
+            </div>
+            <div class="home-page-hero-image">
+                <img src="/logo.svg" alt="Miko Project Logo" class="home-page-hero-logo">
+            </div>
+        </div>
+    </section>
+
+    <section class="home-page-features">
+        <div class="home-page-features-container">
+            <h2 class="home-page-features-title">
+                ${getLocalizedText( input.pageData.homePage.featuresTitle as string, input.pageData.languageTag )}
+            </h2>
+            <div class="home-page-features-grid">
+                <div class="home-page-feature">
+                    <div class="home-page-feature-icon">${input.pageData.homePage.feature1Icon}</div>
+                    <h3 class="home-page-feature-title">
+                        ${getLocalizedText( input.pageData.homePage.feature1Title as string, input.pageData.languageTag )}
+                    </h3>
+                    <p class="home-page-feature-description">
+                        ${getLocalizedText( input.pageData.homePage.feature1Description as string, input.pageData.languageTag )}
+                    </p>
+                </div>
+                <div class="home-page-feature">
+                    <div class="home-page-feature-icon">${input.pageData.homePage.feature2Icon}</div>
+                    <h3 class="home-page-feature-title">
+                        ${getLocalizedText( input.pageData.homePage.feature2Title as string, input.pageData.languageTag )}
+                    </h3>
+                    <p class="home-page-feature-description">
+                        ${getLocalizedText( input.pageData.homePage.feature2Description as string, input.pageData.languageTag )}
+                    </p>
+                </div>
+                <div class="home-page-feature">
+                    <div class="home-page-feature-icon">${input.pageData.homePage.feature3Icon}</div>
+                    <h3 class="home-page-feature-title">
+                        ${getLocalizedText( input.pageData.homePage.feature3Title as string, input.pageData.languageTag )}
+                    </h3>
+                    <p class="home-page-feature-description">
+                        ${getLocalizedText( input.pageData.homePage.feature3Description as string, input.pageData.languageTag )}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<FooterMenu pageData=input.pageData/>

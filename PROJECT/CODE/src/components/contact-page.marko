@@ -1,0 +1,198 @@
+// -- IMPORTS
+
+import { getLocalizedText } from "senselogic-lingo";
+import FooterMenu from "./footer-menu.marko";
+import HeaderMenu from "./header-menu.marko";
+import type { PageViewData } from "../lib/application_data";
+
+// -- TYPES
+
+export interface Input {
+    pageData: PageViewData;
+}
+
+<let/statusMessage="">
+<let/statusIsError=false>
+<let/isSubmitting=false>
+
+<HeaderMenu pageData=input.pageData/>
+<div class="contact-page">
+    <section class="contact-page-hero">
+        <div class="contact-page-hero-container">
+            <h1 class="contact-page-hero-title">
+                ${getLocalizedText( input.pageData.contactPage!.title as string, input.pageData.languageTag )}
+            </h1>
+            <p class="contact-page-hero-subtitle">
+                ${getLocalizedText( input.pageData.contactPage!.text as string, input.pageData.languageTag )}
+            </p>
+        </div>
+    </section>
+
+    <section class="contact-page-content">
+        <div class="contact-page-content-container">
+            <div class="contact-page-form-section">
+                <h2 class="contact-page-form-title">Send us a Message</h2>
+                <form
+                    class="contact-page-form"
+                    onSubmit=
+                        async ( formSubmitEvent ) =>
+                        {
+                                formSubmitEvent.preventDefault();
+                                let contactFormElement = formSubmitEvent.target as HTMLFormElement;
+                                let contactFormData = new FormData( contactFormElement );
+                                let submitButtonElement = contactFormElement.querySelector(
+                                        ".contact-page-form-button"
+                                        ) as HTMLButtonElement;
+                                let originalButtonText = submitButtonElement.textContent;
+                                submitButtonElement.textContent = "Sending...";
+                                submitButtonElement.disabled = true;
+                                isSubmitting = true;
+                                statusMessage = "";
+                                statusIsError = false;
+
+                                try
+                                {
+                                        let responseData = await fetch(
+                                                "/api/contact",
+                                                {
+                                                        method: "POST",
+                                                        body: contactFormData
+                                                }
+                                                );
+                                        let responseResult = await responseData.json();
+
+                                        if ( responseResult.success )
+                                        {
+                                                statusMessage
+                                                        = "Thank you! Your message has been sent successfully.";
+                                                statusIsError = false;
+                                                contactFormElement.reset();
+                                        }
+                                        else
+                                        {
+                                                statusMessage
+                                                        = responseResult.error || "An error occurred. Please try again.";
+                                                statusIsError = true;
+                                        }
+                                }
+                                catch ( formError )
+                                {
+                                        console.error( "Error submitting form:", formError );
+                                        statusMessage
+                                                = "Network error. Please check your connection and try again.";
+                                        statusIsError = true;
+                                }
+                                finally
+                                {
+                                        submitButtonElement.textContent = originalButtonText;
+                                        submitButtonElement.disabled = false;
+                                        isSubmitting = false;
+                                }
+                        }
+                >
+                    <div class="contact-page-form-group">
+                        <label for="name" class="contact-page-form-label">
+                            ${getLocalizedText( input.pageData.contactPage!.namePlaceholder as string, input.pageData.languageTag )}
+                        </label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            class="contact-page-form-input"
+                            placeholder=getLocalizedText(
+                                input.pageData.contactPage!.namePlaceholder as string,
+                                input.pageData.languageTag
+                                )
+                            required
+                        >
+                    </div>
+
+                    <div class="contact-page-form-group">
+                        <label for="email" class="contact-page-form-label">
+                            ${getLocalizedText( input.pageData.contactPage!.emailPlaceholder as string, input.pageData.languageTag )}
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="contact-page-form-input"
+                            placeholder=getLocalizedText(
+                                input.pageData.contactPage!.emailPlaceholder as string,
+                                input.pageData.languageTag
+                                )
+                            required
+                        >
+                    </div>
+
+                    <div class="contact-page-form-group">
+                        <label for="message" class="contact-page-form-label">
+                            ${getLocalizedText( input.pageData.contactPage!.messagePlaceholder as string, input.pageData.languageTag )}
+                        </label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows=5
+                            class="contact-page-form-textarea"
+                            placeholder=getLocalizedText(
+                                input.pageData.contactPage!.messagePlaceholder as string,
+                                input.pageData.languageTag
+                                )
+                            required
+                        />
+                    </div>
+
+                    <if=statusMessage>
+                        <div
+                            class=(
+                                statusIsError
+                                        ? "contact-page-form-error"
+                                        : "contact-page-form-success"
+                                )
+                        >${statusMessage}</div>
+                    </if>
+
+                    <button
+                        type="submit"
+                        class="contact-page-form-button"
+                        disabled=isSubmitting
+                    >
+                        ${getLocalizedText( input.pageData.contactPage!.sendButton as string, input.pageData.languageTag )}
+                    </button>
+                </form>
+            </div>
+
+            <div class="contact-page-info-section">
+                <h2 class="contact-page-info-title">Get in Touch</h2>
+                <div class="contact-page-info-item">
+                    <h3 class="contact-page-info-item-title">Email</h3>
+                    <p class="contact-page-info-item-text">${input.pageData.contactPage!.email}</p>
+                </div>
+                <div class="contact-page-info-item">
+                    <h3 class="contact-page-info-item-title">Phone</h3>
+                    <p class="contact-page-info-item-text">${input.pageData.contactPage!.phone}</p>
+                </div>
+                <div class="contact-page-info-item">
+                    <h3 class="contact-page-info-item-title">Address</h3>
+                    <p class="contact-page-info-item-text">
+                        ${getLocalizedText( input.pageData.contactPage!.address as string, input.pageData.languageTag )}
+                        <br>
+                        ${getLocalizedText( input.pageData.contactPage!.city as string, input.pageData.languageTag )}
+                        <br>
+                        ${getLocalizedText( input.pageData.contactPage!.state as string, input.pageData.languageTag )}
+                    </p>
+                </div>
+                <div class="contact-page-info-item">
+                    <h3 class="contact-page-info-item-title">Business Hours</h3>
+                    <p class="contact-page-info-item-text">
+                        ${getLocalizedText( input.pageData.contactPage!.businessHours1 as string, input.pageData.languageTag )}
+                        <br>
+                        ${getLocalizedText( input.pageData.contactPage!.businessHours2 as string, input.pageData.languageTag )}
+                        <br>
+                        ${getLocalizedText( input.pageData.contactPage!.businessHours3 as string, input.pageData.languageTag )}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<FooterMenu pageData=input.pageData/>

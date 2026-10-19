@@ -1,0 +1,498 @@
+// -- CONSTANTS
+
+blackColor ?= #000000;
+whiteColor ?= #FFFFFF;
+
+grayColor ?= #9E9E9E;
+grayColor50 ?= darken( grayColor, 90% );
+grayColor100 ?= darken( grayColor, 80% );
+grayColor150 ?= darken( grayColor, 70% );
+grayColor200 ?= darken( grayColor, 60% );
+grayColor250 ?= darken( grayColor, 50% );
+grayColor300 ?= darken( grayColor, 40% );
+grayColor350 ?= darken( grayColor, 30% );
+grayColor400 ?= darken( grayColor, 20% );
+grayColor450 ?= darken( grayColor, 10% );
+grayColor500 ?= grayColor;
+grayColor550 ?= lighten( grayColor, 10% );
+grayColor600 ?= lighten( grayColor, 20% );
+grayColor650 ?= lighten( grayColor, 30% );
+grayColor700 ?= lighten( grayColor, 40% );
+grayColor750 ?= lighten( grayColor, 50% );
+grayColor800 ?= lighten( grayColor, 60% );
+grayColor850 ?= lighten( grayColor, 70% );
+grayColor900 ?= lighten( grayColor, 80% );
+grayColor950 ?= lighten( grayColor, 90% );
+
+amberColor ?= #FBBF24;
+amberColor50 ?= darken( amberColor, 90% );
+amberColor100 ?= darken( amberColor, 80% );
+amberColor150 ?= darken( amberColor, 70% );
+amberColor200 ?= darken( amberColor, 60% );
+amberColor250 ?= darken( amberColor, 50% );
+amberColor300 ?= darken( amberColor, 40% );
+amberColor350 ?= darken( amberColor, 30% );
+amberColor400 ?= darken( amberColor, 20% );
+amberColor450 ?= darken( amberColor, 10% );
+amberColor500 ?= amberColor;
+amberColor550 ?= lighten( amberColor, 10% );
+amberColor600 ?= lighten( amberColor, 20% );
+amberColor650 ?= lighten( amberColor, 30% );
+amberColor700 ?= lighten( amberColor, 40% );
+amberColor750 ?= lighten( amberColor, 50% );
+amberColor800 ?= lighten( amberColor, 60% );
+amberColor850 ?= lighten( amberColor, 70% );
+amberColor900 ?= lighten( amberColor, 80% );
+amberColor950 ?= lighten( amberColor, 90% );
+
+blueColor ?= #2196F3;
+blueColor50 ?= darken( blueColor, 90% );
+blueColor100 ?= darken( blueColor, 80% );
+blueColor150 ?= darken( blueColor, 70% );
+blueColor200 ?= darken( blueColor, 60% );
+blueColor250 ?= darken( blueColor, 50% );
+blueColor300 ?= darken( blueColor, 40% );
+blueColor350 ?= darken( blueColor, 30% );
+blueColor400 ?= darken( blueColor, 20% );
+blueColor450 ?= darken( blueColor, 10% );
+blueColor500 ?= blueColor;
+blueColor550 ?= lighten( blueColor, 10% );
+blueColor600 ?= lighten( blueColor, 20% );
+blueColor650 ?= lighten( blueColor, 30% );
+blueColor700 ?= lighten( blueColor, 40% );
+blueColor750 ?= lighten( blueColor, 50% );
+blueColor800 ?= lighten( blueColor, 60% );
+blueColor850 ?= lighten( blueColor, 70% );
+blueColor900 ?= lighten( blueColor, 80% );
+blueColor950 ?= lighten( blueColor, 90% );
+
+cyanColor ?= #00BCD4;
+cyanColor50 ?= darken( cyanColor, 90% );
+cyanColor100 ?= darken( cyanColor, 80% );
+cyanColor150 ?= darken( cyanColor, 70% );
+cyanColor200 ?= darken( cyanColor, 60% );
+cyanColor250 ?= darken( cyanColor, 50% );
+cyanColor300 ?= darken( cyanColor, 40% );
+cyanColor350 ?= darken( cyanColor, 30% );
+cyanColor400 ?= darken( cyanColor, 20% );
+cyanColor450 ?= darken( cyanColor, 10% );
+cyanColor500 ?= cyanColor;
+cyanColor550 ?= lighten( cyanColor, 10% );
+cyanColor600 ?= lighten( cyanColor, 20% );
+cyanColor650 ?= lighten( cyanColor, 30% );
+cyanColor700 ?= lighten( cyanColor, 40% );
+cyanColor750 ?= lighten( cyanColor, 50% );
+cyanColor800 ?= lighten( cyanColor, 60% );
+cyanColor850 ?= lighten( cyanColor, 70% );
+cyanColor900 ?= lighten( cyanColor, 80% );
+cyanColor950 ?= lighten( cyanColor, 90% );
+
+greenColor ?= #10B981;
+greenColor50 ?= darken( greenColor, 90% );
+greenColor100 ?= darken( greenColor, 80% );
+greenColor150 ?= darken( greenColor, 70% );
+greenColor200 ?= darken( greenColor, 60% );
+greenColor250 ?= darken( greenColor, 50% );
+greenColor300 ?= darken( greenColor, 40% );
+greenColor350 ?= darken( greenColor, 30% );
+greenColor400 ?= darken( greenColor, 20% );
+greenColor450 ?= darken( greenColor, 10% );
+greenColor500 ?= greenColor;
+greenColor550 ?= lighten( greenColor, 10% );
+greenColor600 ?= lighten( greenColor, 20% );
+greenColor650 ?= lighten( greenColor, 30% );
+greenColor700 ?= lighten( greenColor, 40% );
+greenColor750 ?= lighten( greenColor, 50% );
+greenColor800 ?= lighten( greenColor, 60% );
+greenColor850 ?= lighten( greenColor, 70% );
+greenColor900 ?= lighten( greenColor, 80% );
+greenColor950 ?= lighten( greenColor, 90% );
+
+magentaColor ?= #F700F7;
+magentaColor50 ?= darken( magentaColor, 90% );
+magentaColor100 ?= darken( magentaColor, 80% );
+magentaColor150 ?= darken( magentaColor, 70% );
+magentaColor200 ?= darken( magentaColor, 60% );
+magentaColor250 ?= darken( magentaColor, 50% );
+magentaColor300 ?= darken( magentaColor, 40% );
+magentaColor350 ?= darken( magentaColor, 30% );
+magentaColor400 ?= darken( magentaColor, 20% );
+magentaColor450 ?= darken( magentaColor, 10% );
+magentaColor500 ?= magentaColor;
+magentaColor550 ?= lighten( magentaColor, 10% );
+magentaColor600 ?= lighten( magentaColor, 20% );
+magentaColor650 ?= lighten( magentaColor, 30% );
+magentaColor700 ?= lighten( magentaColor, 40% );
+magentaColor750 ?= lighten( magentaColor, 50% );
+magentaColor800 ?= lighten( magentaColor, 60% );
+magentaColor850 ?= lighten( magentaColor, 70% );
+magentaColor900 ?= lighten( magentaColor, 80% );
+magentaColor950 ?= lighten( magentaColor, 90% );
+
+orangeColor ?= #FF9800;
+orangeColor50 ?= darken( orangeColor, 90% );
+orangeColor100 ?= darken( orangeColor, 80% );
+orangeColor150 ?= darken( orangeColor, 70% );
+orangeColor200 ?= darken( orangeColor, 60% );
+orangeColor250 ?= darken( orangeColor, 50% );
+orangeColor300 ?= darken( orangeColor, 40% );
+orangeColor350 ?= darken( orangeColor, 30% );
+orangeColor400 ?= darken( orangeColor, 20% );
+orangeColor450 ?= darken( orangeColor, 10% );
+orangeColor500 ?= orangeColor;
+orangeColor550 ?= lighten( orangeColor, 10% );
+orangeColor600 ?= lighten( orangeColor, 20% );
+orangeColor650 ?= lighten( orangeColor, 30% );
+orangeColor700 ?= lighten( orangeColor, 40% );
+orangeColor750 ?= lighten( orangeColor, 50% );
+orangeColor800 ?= lighten( orangeColor, 60% );
+orangeColor850 ?= lighten( orangeColor, 70% );
+orangeColor900 ?= lighten( orangeColor, 80% );
+orangeColor950 ?= lighten( orangeColor, 90% );
+
+redColor ?= #EF4444;
+redColor50 ?= darken( redColor, 90% );
+redColor100 ?= darken( redColor, 80% );
+redColor150 ?= darken( redColor, 70% );
+redColor200 ?= darken( redColor, 60% );
+redColor250 ?= darken( redColor, 50% );
+redColor300 ?= darken( redColor, 40% );
+redColor350 ?= darken( redColor, 30% );
+redColor400 ?= darken( redColor, 20% );
+redColor450 ?= darken( redColor, 10% );
+redColor500 ?= redColor;
+redColor550 ?= lighten( redColor, 10% );
+redColor600 ?= lighten( redColor, 20% );
+redColor650 ?= lighten( redColor, 30% );
+redColor700 ?= lighten( redColor, 40% );
+redColor750 ?= lighten( redColor, 50% );
+redColor800 ?= lighten( redColor, 60% );
+redColor850 ?= lighten( redColor, 70% );
+redColor900 ?= lighten( redColor, 80% );
+redColor950 ?= lighten( redColor, 90% );
+
+tealColor ?= #14B8A6;
+tealColor50 ?= darken( tealColor, 90% );
+tealColor100 ?= darken( tealColor, 80% );
+tealColor150 ?= darken( tealColor, 70% );
+tealColor200 ?= darken( tealColor, 60% );
+tealColor250 ?= darken( tealColor, 50% );
+tealColor300 ?= darken( tealColor, 40% );
+tealColor350 ?= darken( tealColor, 30% );
+tealColor400 ?= darken( tealColor, 20% );
+tealColor450 ?= darken( tealColor, 10% );
+tealColor500 ?= tealColor;
+tealColor550 ?= lighten( tealColor, 10% );
+tealColor600 ?= lighten( tealColor, 20% );
+tealColor650 ?= lighten( tealColor, 30% );
+tealColor700 ?= lighten( tealColor, 40% );
+tealColor750 ?= lighten( tealColor, 50% );
+tealColor800 ?= lighten( tealColor, 60% );
+tealColor850 ?= lighten( tealColor, 70% );
+tealColor900 ?= lighten( tealColor, 80% );
+tealColor950 ?= lighten( tealColor, 90% );
+
+yellowColor ?= #FFEB3B;
+yellowColor50 ?= darken( yellowColor, 90% );
+yellowColor100 ?= darken( yellowColor, 80% );
+yellowColor150 ?= darken( yellowColor, 70% );
+yellowColor200 ?= darken( yellowColor, 60% );
+yellowColor250 ?= darken( yellowColor, 50% );
+yellowColor300 ?= darken( yellowColor, 40% );
+yellowColor350 ?= darken( yellowColor, 30% );
+yellowColor400 ?= darken( yellowColor, 20% );
+yellowColor450 ?= darken( yellowColor, 10% );
+yellowColor500 ?= yellowColor;
+yellowColor550 ?= lighten( yellowColor, 10% );
+yellowColor600 ?= lighten( yellowColor, 20% );
+yellowColor650 ?= lighten( yellowColor, 30% );
+yellowColor700 ?= lighten( yellowColor, 40% );
+yellowColor750 ?= lighten( yellowColor, 50% );
+yellowColor800 ?= lighten( yellowColor, 60% );
+yellowColor850 ?= lighten( yellowColor, 70% );
+yellowColor900 ?= lighten( yellowColor, 80% );
+yellowColor950 ?= lighten( yellowColor, 90% );
+
+tableBorderColor ?= #f0f0f0;
+linkColor ?= #000000;
+linkHoverColor ?= #202020;
+
+primaryColor ?= #059669;
+primaryColor50 ?= darken( primaryColor, 90% );
+primaryColor100 ?= darken( primaryColor, 80% );
+primaryColor150 ?= darken( primaryColor, 70% );
+primaryColor200 ?= darken( primaryColor, 60% );
+primaryColor250 ?= darken( primaryColor, 50% );
+primaryColor300 ?= darken( primaryColor, 40% );
+primaryColor350 ?= darken( primaryColor, 30% );
+primaryColor400 ?= darken( primaryColor, 20% );
+primaryColor450 ?= darken( primaryColor, 10% );
+primaryColor500 ?= primaryColor;
+primaryColor550 ?= lighten( primaryColor, 10% );
+primaryColor600 ?= lighten( primaryColor, 20% );
+primaryColor650 ?= lighten( primaryColor, 30% );
+primaryColor700 ?= lighten( primaryColor, 40% );
+primaryColor750 ?= lighten( primaryColor, 50% );
+primaryColor800 ?= lighten( primaryColor, 60% );
+primaryColor850 ?= lighten( primaryColor, 70% );
+primaryColor900 ?= lighten( primaryColor, 80% );
+primaryColor950 ?= lighten( primaryColor, 90% );
+
+secondaryColor ?= #86efac;
+
+accentColor ?= #047857;
+textColor ?= #111827;
+backgroundColor ?= #FFFFFF;
+siteBorderRadius ?= 0.5rem;
+boxShadow ?= 0 0.125rem 0.625rem rgba( 0, 0, 0, 0.1 );
+siteButtonPadding ?= 0.75rem 1.5rem;
+siteButtonBorderRadius ?= 0.375rem;
+siteButtonTransition ?= all 0.2s ease;
+secondaryColor50 ?= darken( secondaryColor, 90% );
+secondaryColor100 ?= darken( secondaryColor, 80% );
+secondaryColor150 ?= darken( secondaryColor, 70% );
+secondaryColor200 ?= darken( secondaryColor, 60% );
+secondaryColor250 ?= darken( secondaryColor, 50% );
+secondaryColor300 ?= darken( secondaryColor, 40% );
+secondaryColor350 ?= darken( secondaryColor, 30% );
+secondaryColor400 ?= darken( secondaryColor, 20% );
+secondaryColor450 ?= darken( secondaryColor, 10% );
+secondaryColor500 ?= secondaryColor;
+secondaryColor550 ?= lighten( secondaryColor, 10% );
+secondaryColor600 ?= lighten( secondaryColor, 20% );
+secondaryColor650 ?= lighten( secondaryColor, 30% );
+secondaryColor700 ?= lighten( secondaryColor, 40% );
+secondaryColor750 ?= lighten( secondaryColor, 50% );
+secondaryColor800 ?= lighten( secondaryColor, 60% );
+secondaryColor850 ?= lighten( secondaryColor, 70% );
+secondaryColor900 ?= lighten( secondaryColor, 80% );
+secondaryColor950 ?= lighten( secondaryColor, 90% );
+
+grayBackgroundColor ?= grayColor950;
+primaryBackgroundColor ?= primaryColor;
+secondaryBackgroundColor ?= secondaryColor;
+
+grayBorderColor ?= grayColor700;
+primaryBorderColor ?= primaryColor;
+secondaryBorderColor ?= secondaryColor;
+
+buttonBorderRadius ?= 0.5rem;
+buttonPadding ?= 0.5rem 1rem;
+
+inputBorderColor ?= grayColor700;
+inputBorderRadius ?= 0.5rem;
+inputPadding ?= 0.5rem;
+inputFocusBorderColor ?= blueColor;
+inputFocusOutlineColor ?= transparent;
+
+datePickerMonthNameFontSize ?= 1rem;
+datePickerMonthNameFontWeight ?= 500;
+datePickerMonthNameColor ?= blackColor;
+datePickerMonthButtonFontSize ?= 1rem;
+datePickerMonthButtonFontWeight ?= 700;
+datePickerMonthButtonColor ?= grayColor;
+datePickerMonthButtonHoverColor ?= blackColor;
+datePickerMonthBorderColor ?= grayColor;
+datePickerMonthBorderWidth ?= 1px;
+datePickerWeekdayFontWeight ?= 400;
+datePickerWeekdayColor ?= grayColor;
+datePickerDayFontWeight ?= 400;
+datePickerDayColor ?= grayColor700;
+datePickerDayHovercolor ?= blackColor;
+datePickerGrayedDayFontWeight ?= 400;
+datePickerGrayedDayColor ?= transparent;
+datePickerInsideDayFontWeight ?= 400;
+datePickerInsideDayColor ?= blackColor;
+datePickerSelectedDayFontWeight ?= 400;
+datePickerSelectedDayColor ?= blackColor;
+datePickerSelectedDayBorderColor ?= grayColor;
+datePickerSelectedDayBorderWidth ?= 1px;
+
+switchInputSliderSize ?= 1em;
+switchInputPaddingSize ?= 0.2em;
+switchInputUncheckedBackground ?= grayColor700;
+switchInputCheckedBackground ?= greenColor;
+switchInputUncheckedSliderBackground ?= whiteColor;
+switchInputCheckedSliderBackground ?= whiteColor;
+
+valuePickerTrackHeight ?= 0.5rem;
+valuePickerTrackBackgroundColor ?= grayColor700;
+valuePickerRangeBackgroundColor ?= blueColor300;
+valuePickerSliderSize ?= 1rem;
+valuePickerSliderBackgroundColor ?= whiteColor;
+valuePickerSliderBorderWidth ?= 2px;
+valuePickerSliderBorderColor ?= blueColor;
+valuePickerTextMarginTop ?= 0.15rem;
+valuePickerTextFontSize ?= 1rem;
+valuePickerTextFontWeight ?= 400;
+valuePickerTextColor ?= blackColor;
+
+primaryFontFamily ?= sans-serif;
+secondaryFontFamily ?= serif;
+monospaceFontFamily ?= mono;
+
+mediaQueryMap = {
+    shorter-16em: "(max-height: 15.999em)",
+    shorter-20em: "(max-height: 19.999em)",
+    shorter-24em: "(max-height: 23.999em)",
+    shorter-28em: "(max-height: 27.999em)",
+    shorter-32em: "(max-height: 31.999em)",
+    shorter-36em: "(max-height: 35.999em)",
+    shorter-40em: "(max-height: 39.999em)",
+    shorter-44em: "(max-height: 43.999em)",
+    shorter-48em: "(max-height: 47.999em)",
+    shorter-52em: "(max-height: 51.999em)",
+    shorter-56em: "(max-height: 55.999em)",
+    shorter-60em: "(max-height: 59.999em)",
+    shorter-64em: "(max-height: 63.999em)",
+    shorter-68em: "(max-height: 67.999em)",
+    shorter-72em: "(max-height: 71.999em)",
+    shorter-76em: "(max-height: 75.999em)",
+    shorter-80em: "(max-height: 79.999em)",
+    shorter-84em: "(max-height: 83.999em)",
+    shorter-88em: "(max-height: 87.999em)",
+    shorter-92em: "(max-height: 91.999em)",
+    shorter-96em: "(max-height: 95.999em)",
+    shorter-100em: "(max-height: 99.999em)",
+    shorter-104em: "(max-height: 103.999em)",
+    shorter-108em: "(max-height: 107.999em)",
+    shorter-112em: "(max-height: 111.999em)",
+    shorter-116em: "(max-height: 115.999em)",
+    shorter-120em: "(max-height: 119.999em)",
+    shorter-124em: "(max-height: 123.999em)",
+    shorter-128em: "(max-height: 127.999em)",
+    taller-16em: "(min-height: 16em)",
+    taller-20em: "(min-height: 20em)",
+    taller-24em: "(min-height: 24em)",
+    taller-28em: "(min-height: 28em)",
+    taller-32em: "(min-height: 32em)",
+    taller-36em: "(min-height: 36em)",
+    taller-40em: "(min-height: 40em)",
+    taller-44em: "(min-height: 44em)",
+    taller-48em: "(min-height: 48em)",
+    taller-52em: "(min-height: 52em)",
+    taller-56em: "(min-height: 56em)",
+    taller-60em: "(min-height: 60em)",
+    taller-64em: "(min-height: 64em)",
+    taller-68em: "(min-height: 68em)",
+    taller-72em: "(min-height: 72em)",
+    taller-76em: "(min-height: 76em)",
+    taller-80em: "(min-height: 80em)",
+    taller-84em: "(min-height: 84em)",
+    taller-88em: "(min-height: 88em)",
+    taller-92em: "(min-height: 92em)",
+    taller-96em: "(min-height: 96em)",
+    taller-100em: "(min-height: 100em)",
+    taller-104em: "(min-height: 104em)",
+    taller-108em: "(min-height: 108em)",
+    taller-112em: "(min-height: 112em)",
+    taller-116em: "(min-height: 116em)",
+    taller-120em: "(min-height: 120em)",
+    taller-124em: "(min-height: 124em)",
+    taller-128em: "(min-height: 128em)",
+    smaller-16em: "(max-width: 15.999em)",
+    smaller-20em: "(max-width: 19.999em)",
+    smaller-24em: "(max-width: 23.999em)",
+    smaller-28em: "(max-width: 27.999em)",
+    smaller-32em: "(max-width: 31.999em)",
+    smaller-36em: "(max-width: 35.999em)",
+    smaller-40em: "(max-width: 39.999em)",
+    smaller-44em: "(max-width: 43.999em)",
+    smaller-48em: "(max-width: 47.999em)",
+    smaller-52em: "(max-width: 51.999em)",
+    smaller-56em: "(max-width: 55.999em)",
+    smaller-60em: "(max-width: 59.999em)",
+    smaller-64em: "(max-width: 63.999em)",
+    smaller-68em: "(max-width: 67.999em)",
+    smaller-72em: "(max-width: 71.999em)",
+    smaller-76em: "(max-width: 75.999em)",
+    smaller-80em: "(max-width: 79.999em)",
+    smaller-84em: "(max-width: 83.999em)",
+    smaller-88em: "(max-width: 87.999em)",
+    smaller-92em: "(max-width: 91.999em)",
+    smaller-96em: "(max-width: 95.999em)",
+    smaller-100em: "(max-width: 99.999em)",
+    smaller-104em: "(max-width: 103.999em)",
+    smaller-108em: "(max-width: 107.999em)",
+    smaller-112em: "(max-width: 111.999em)",
+    smaller-116em: "(max-width: 115.999em)",
+    smaller-120em: "(max-width: 119.999em)",
+    smaller-124em: "(max-width: 123.999em)",
+    smaller-128em: "(max-width: 127.999em)",
+    larger-16em: "(min-width: 16em)",
+    larger-20em: "(min-width: 20em)",
+    larger-24em: "(min-width: 24em)",
+    larger-28em: "(min-width: 28em)",
+    larger-32em: "(min-width: 32em)",
+    larger-36em: "(min-width: 36em)",
+    larger-40em: "(min-width: 40em)",
+    larger-44em: "(min-width: 44em)",
+    larger-48em: "(min-width: 48em)",
+    larger-52em: "(min-width: 52em)",
+    larger-56em: "(min-width: 56em)",
+    larger-60em: "(min-width: 60em)",
+    larger-64em: "(min-width: 64em)",
+    larger-68em: "(min-width: 68em)",
+    larger-72em: "(min-width: 72em)",
+    larger-76em: "(min-width: 76em)",
+    larger-80em: "(min-width: 80em)",
+    larger-84em: "(min-width: 84em)",
+    larger-88em: "(min-width: 88em)",
+    larger-92em: "(min-width: 92em)",
+    larger-96em: "(min-width: 96em)",
+    larger-100em: "(min-width: 100em)",
+    larger-104em: "(min-width: 104em)",
+    larger-108em: "(min-width: 108em)",
+    larger-112em: "(min-width: 112em)",
+    larger-116em: "(min-width: 116em)",
+    larger-120em: "(min-width: 120em)",
+    larger-124em: "(min-width: 124em)",
+    larger-128em: "(min-width: 128em)",
+    below-xxsmall: "(min-width: 15.999em)",
+    below-xsmall: "(min-width: 31.999em)",
+    below-small: "(min-width: 47.999em)",
+    below-medium: "(min-width: 63.999em)",
+    below-large: "(min-width: 79.999em)",
+    below-xlarge: "(min-width: 95.999em)",
+    below-xxlarge: "(min-width: 111.999em)",
+    below-xxxlarge: "(min-width: 127.999em)",
+    below-mobile: "(min-width: 15.999em)",
+    below-phone: "(min-width: 31.999em)",
+    below-tablet: "(min-width: 47.999em)",
+    below-desktop: "(min-width: 63.999em)",
+    below-desktop-large: "(min-width: 79.999em)",
+    below-desktop-xlarge: "(min-width: 95.999em)",
+    below-desktop-xxlarge: "(min-width: 111.999em)",
+    below-desktop-xxxlarge: "(min-width: 127.999em)",
+    xxsmall: "(min-width: 16em)",
+    xsmall: "(min-width: 32em)",
+    small: "(min-width: 48em)",
+    medium: "(min-width: 64em)",
+    large: "(min-width: 80em)",
+    xlarge: "(min-width: 96em)",
+    xxlarge: "(min-width: 112em)",
+    xxxlarge: "(min-width: 128em)",
+    mobile: "(min-width: 16em)",
+    phone: "(min-width: 32em)",
+    tablet: "(min-width: 48em)",
+    desktop: "(min-width: 64em)",
+    desktop-large: "(min-width: 80em)",
+    desktop-xlarge: "(min-width: 96em)",
+    desktop-xxlarge: "(min-width: 112em)",
+    desktop-xxxlarge: "(min-width: 128em)",
+    orientation-landscape: "(orientation: landscape)",
+    orientation-portrait: "(orientation: portrait)",
+    pointer-none: "(pointer: none)",
+    pointer-fine: "(pointer: fine)",
+    pointer-coarse: "(pointer: coarse)",
+    any-pointer-fine: "(any-pointer: fine)",
+    any-pointer-coarse: "(any-pointer: coarse)",
+    hover: "(hover)",
+    any-hover: "(any-hover)",
+    screen: "screen",
+    print: "print",
+    "!": "not",
+    "&&": "and",
+    "||": ","
+    ",": ","
+};

@@ -1,0 +1,115 @@
+// -- IMPORTS
+
+import { getLocalizedText } from "senselogic-lingo";
+import FooterMenu from "./footer-menu.marko";
+import HeaderMenu from "./header-menu.marko";
+import type { PageViewData } from "../lib/application_data";
+
+// -- TYPES
+
+export interface Input {
+    pageData: PageViewData;
+}
+
+<HeaderMenu pageData=input.pageData/>
+<div class="products-page">
+    <section class="products-page-hero">
+        <div class="products-page-hero-container">
+            <h1 class="products-page-hero-title">
+                ${getLocalizedText( input.pageData.productsPage!.title, input.pageData.languageTag )}
+            </h1>
+            <p class="products-page-hero-subtitle">
+                ${getLocalizedText( input.pageData.productsPage!.text, input.pageData.languageTag )}
+            </p>
+        </div>
+    </section>
+
+    <section class="products-page-filters">
+        <div class="products-page-filters-container">
+            <div class="products-page-filter">
+                <label class="products-page-filter-label">
+                    ${getLocalizedText( input.pageData.productsPage!.genderButton, input.pageData.languageTag )}
+                </label>
+                <select class="products-page-filter-select">
+                    <option value="">All Genders</option>
+                    <for|[ genderSlug, genderName ]| in=input.pageData.genderBySlugMap>
+                        <option value=genderSlug>
+                            ${getLocalizedText( genderName, input.pageData.languageTag )}
+                        </option>
+                    </for>
+                </select>
+            </div>
+
+            <div class="products-page-filter">
+                <label class="products-page-filter-label">
+                    ${getLocalizedText( input.pageData.productsPage!.categoryButton, input.pageData.languageTag )}
+                </label>
+                <select class="products-page-filter-select">
+                    <option value="">All Categories</option>
+                    <for|[ categorySlug, categoryName ]| in=input.pageData.categoryBySlugMap>
+                        <option value=categorySlug>
+                            ${getLocalizedText( categoryName, input.pageData.languageTag )}
+                        </option>
+                    </for>
+                </select>
+            </div>
+
+            <div class="products-page-filter">
+                <label class="products-page-filter-label">
+                    ${getLocalizedText( input.pageData.productsPage!.brandButton, input.pageData.languageTag )}
+                </label>
+                <select class="products-page-filter-select">
+                    <option value="">All Brands</option>
+                    <for|[ brandSlug, brandName ]| in=input.pageData.brandBySlugMap>
+                        <option value=brandSlug>
+                            ${getLocalizedText( brandName, input.pageData.languageTag )}
+                        </option>
+                    </for>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-page-grid">
+        <div class="products-page-grid-container">
+            <for|productItem| of=input.pageData.productArray ?? []>
+                <div class="products-page-product">
+                    <div class="products-page-product-image">
+                        <img
+                            src=productItem.imagePath || "/logo.svg"
+                            alt=getLocalizedText( productItem.model, input.pageData.languageTag )
+                            class="products-page-product-img"
+                        >
+                    </div>
+                    <div class="products-page-product-info">
+                        <h3 class="products-page-product-brand">
+                            ${getLocalizedText( input.pageData.brandBySlugMap![ productItem.brandSlug ], input.pageData.languageTag )}
+                        </h3>
+                        <h4 class="products-page-product-model">
+                            ${getLocalizedText( productItem.model, input.pageData.languageTag )}
+                        </h4>
+                        <p class="products-page-product-category">
+                            ${getLocalizedText( input.pageData.categoryBySlugMap![ productItem.categorySlug ], input.pageData.languageTag )}
+                        </p>
+                        <p class="products-page-product-gender">
+                            ${getLocalizedText( input.pageData.genderBySlugMap![ productItem.genderSlug ], input.pageData.languageTag )}
+                        </p>
+                        <div class="products-page-product-sizes">
+                            <span class="products-page-product-sizes-label">Available Sizes:</span>
+                            <div class="products-page-product-sizes-list">
+                                <for|sizeSlugItem| of=productItem.sizeSlugArray>
+                                    <span class="products-page-product-size">
+                                        ${getLocalizedText( input.pageData.sizeBySlugMap![ sizeSlugItem ], input.pageData.languageTag )}
+                                    </span>
+                                </for>
+                            </div>
+                        </div>
+                        <div class="products-page-product-price">$${productItem.price}</div>
+                        <button type="button" class="products-page-product-button">Add to Cart</button>
+                    </div>
+                </div>
+            </for>
+        </div>
+    </section>
+</div>
+<FooterMenu pageData=input.pageData/>

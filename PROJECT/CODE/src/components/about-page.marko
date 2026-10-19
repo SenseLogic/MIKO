@@ -1,0 +1,75 @@
+// -- IMPORTS
+
+import { getLocalizedText } from "senselogic-lingo";
+import FooterMenu from "./footer-menu.marko";
+import HeaderMenu from "./header-menu.marko";
+import type { PageViewData } from "../lib/application_data";
+
+// -- TYPES
+
+export interface Input {
+    pageData: PageViewData;
+}
+
+<HeaderMenu pageData=input.pageData/>
+<div class="about-page">
+    <section class="about-page-hero">
+        <div class="about-page-hero-container">
+            <h1 class="about-page-hero-title">
+                ${getLocalizedText( input.pageData.aboutPage!.title as string, input.pageData.languageTag )}
+            </h1>
+            <p class="about-page-hero-subtitle">
+                ${getLocalizedText( input.pageData.aboutPage!.text as string, input.pageData.languageTag )}
+            </p>
+        </div>
+    </section>
+
+    <section class="about-page-content">
+        <div class="about-page-content-container">
+            <div class="about-page-story">
+                <h2 class="about-page-story-title">
+                    ${getLocalizedText( input.pageData.aboutPage!.storyTitle as string, input.pageData.languageTag )}
+                </h2>
+                <p class="about-page-story-text">
+                    ${getLocalizedText( input.pageData.aboutPage!.storyText1 as string, input.pageData.languageTag )}
+                </p>
+                <p class="about-page-story-text">
+                    ${getLocalizedText( input.pageData.aboutPage!.storyText2 as string, input.pageData.languageTag )}
+                </p>
+            </div>
+
+            <div class="about-page-values">
+                <h2 class="about-page-values-title">
+                    ${getLocalizedText( input.pageData.aboutPage!.valuesTitle as string, input.pageData.languageTag )}
+                </h2>
+                <div class="about-page-values-grid">
+                    <div class="about-page-value">
+                        <h3 class="about-page-value-title">
+                            ${getLocalizedText( input.pageData.aboutPage!.value1Title as string, input.pageData.languageTag )}
+                        </h3>
+                        <p class="about-page-value-description">
+                            ${getLocalizedText( input.pageData.aboutPage!.value1Description as string, input.pageData.languageTag )}
+                        </p>
+                    </div>
+                    <div class="about-page-value">
+                        <h3 class="about-page-value-title">
+                            ${getLocalizedText( input.pageData.aboutPage!.value2Title as string, input.pageData.languageTag )}
+                        </h3>
+                        <p class="about-page-value-description">
+                            ${getLocalizedText( input.pageData.aboutPage!.value2Description as string, input.pageData.languageTag )}
+                        </p>
+                    </div>
+                    <div class="about-page-value">
+                        <h3 class="about-page-value-title">
+                            ${getLocalizedText( input.pageData.aboutPage!.value3Title as string, input.pageData.languageTag )}
+                        </h3>
+                        <p class="about-page-value-description">
+                            ${getLocalizedText( input.pageData.aboutPage!.value3Description as string, input.pageData.languageTag )}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<FooterMenu pageData=input.pageData/>

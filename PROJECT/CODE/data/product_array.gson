@@ -1,0 +1,446 @@
+[
+    {
+        "genderSlug":
+            "men",
+        "categorySlug":
+            "casual",
+        "brandSlug":
+            "nike",
+        "model":
+            ‴Air max 12
+            ¨fr:Air max 12
+            ¨de:Air max 12
+            ¨es:Air max 12
+            ¨pt:Air max 12‴,
+        "price":
+            95,
+        "sizeSlugArray":
+            [
+                "small",
+                "medium",
+                "large"
+            ],
+        "imagePath":
+            "/static/image/product/product_1.avif"
+    },
+    {
+        "genderSlug":
+            "women",
+        "categorySlug":
+            "running",
+        "brandSlug":
+            "adidas",
+        "model":
+            ‴Ultraboost 22
+            ¨fr:Ultraboost 22
+            ¨de:Ultraboost 22
+            ¨es:Ultraboost 22
+            ¨pt:Ultraboost 22‴,
+        "price":
+            180,
+        "sizeSlugArray":
+            [
+                "extra-small",
+                "small",
+                "medium",
+                "large"
+            ],
+        "imagePath":
+            "/static/image/product/product_2.avif"
+    },
+    {
+        "genderSlug":
+            "men",
+        "categorySlug":
+            "tennis",
+        "brandSlug":
+            "puma",
+        "model":
+            ‴Court Classic
+            ¨fr:Court Classic
+            ¨de:Court Classic
+            ¨es:Court Classic
+            ¨pt:Court Classic‴,
+        "price":
+            75,
+        "sizeSlugArray":
+            [
+                "small",
+                "medium",
+                "large",
+                "extra-large"
+            ],
+        "imagePath":
+            "/static/image/product/product_3.avif"
+    },
+    {
+        "genderSlug":
+            "women",
+        "categorySlug":
+            "casual",
+        "brandSlug":
+            "new-balance",
+        "model":
+            ‴574 Classic
+            ¨fr:574 Classic
+            ¨de:574 Classic
+            ¨es:574 Classic
+            ¨pt:574 Classic‴,
+        "price":
+            85,
+        "sizeSlugArray":
+            [
+                "extra-small",
+                "small",
+                "medium"
+            ],
+        "imagePath":
+            "/static/image/product/product_4.avif"
+    },
+    {
+        "genderSlug":
+            "men",
+        "categorySlug":
+            "running",
+        "brandSlug":
+            "asics",
+        "model":
+            ‴Gel-Kayano 28
+            ¨fr:Gel-Kayano 28
+            ¨de:Gel-Kayano 28
+            ¨es:Gel-Kayano 28
+            ¨pt:Gel-Kayano 28‴,
+        "price":
+            160,
+        "sizeSlugArray":
+            [
+                "small",
+                "medium",
+                "large",
+                "extra-large"
+            ],
+        "imagePath":
+            "/static/image/product/product_5.avif"
+    },
+    {
+        "genderSlug":
+            "women",
+        "categorySlug":
+            "tennis",
+        "brandSlug":
+            "reebok",
+        "model":
+            ‴Classic Leather
+            ¨fr:Classic Leather
+            ¨de:Classic Leather
+            ¨es:Classic Leather
+            ¨pt:Classic Leather‴,
+        "price":
+            70,
+        "sizeSlugArray":
+            [
+                "extra-small",
+                "small",
+                "medium",
+                "large"
+            ],
+        "imagePath":
+            "/static/image/product/product_6.avif"
+    },
+    {
+        "genderSlug":
+            "men",
+        "categorySlug":
+            "casual",
+        "brandSlug":
+            "saucony",
+        "model":
+            ‴Jazz Original
+            ¨fr:Jazz Original
+            ¨de:Jazz Original
+            ¨es:Jazz Original
+            ¨pt:Jazz Original‴,
+        "price":
+            65,
+        "sizeSlugArray":
+            [
+                "small",
+                "medium",
+                "large"
+            ],
+        "imagePath":
+            "/static/image/product/product_7.avif"
+    },
+    {
+        "genderSlug":
+            "women",
+        "categorySlug":
+            "running",
+        "brandSlug":
+            "brooks",
+        "model":
+            ‴Ghost 14
+            ¨fr:Ghost 14
+            ¨de:Ghost 14
+            ¨es:Ghost 14
+            ¨pt:Ghost 14‴,
+        "price":
+            130,
+        "sizeSlugArray":
+            [
+                "extra-small",
+                "small",
+                "medium",
+                "large"
+            ],
+        "imagePath":
+            "/static/image/product/product_8.avif"
+    },
+    {
+        "genderSlug":
+            "men",
+        "categorySlug":
+            "tennis",
+        "brandSlug":
+            "mizuno",
+        "model":
+            ‴Wave Prophecy 11
+            ¨fr:Wave Prophecy 11
+            ¨de:Wave Prophecy 11
+            ¨es:Wave Prophecy 11
+            ¨pt:Wave Prophecy 11‴,
+        "price":
+            200,
+        "sizeSlugArray":
+            [
+                "small",
+                "medium",
+                "large",
+                "extra-large"
+            ],
+        "imagePath":
+            "/static/image/product/product_9.avif"
+    },
+    {
+        "genderSlug":
+            "women",
+        "categorySlug":
+            "casual",
+        "brandSlug":
+            "salomon",
+        "model":
+            ‴XT-6
+            ¨fr:XT-6
+            ¨de:XT-6
+            ¨es:XT-6
+            ¨pt:XT-6‴,
+        "price":
+            140,
+        "sizeSlugArray":
+            [
+                "extra-small",
+                "small",
+                "medium"
+            ],
+        "imagePath":
+            "/static/image/product/product_10.avif"
+    },
+    {
+        "genderSlug":
+            "men",
+        "categorySlug":
+            "running",
+        "brandSlug":
+            "skechers",
+        "model":
+            ‴Go Run Max
+            ¨fr:Go Run Max
+            ¨de:Go Run Max
+            ¨es:Go Run Max
+            ¨pt:Go Run Max‴,
+        "price":
+            90,
+        "sizeSlugArray":
+            [
+                "small",
+                "medium",
+                "large",
+                "extra-large"
+            ],
+        "imagePath":
+            "/static/image/product/product_11.avif"
+    },
+    {
+        "genderSlug":
+            "women",
+        "categorySlug":
+            "tennis",
+        "brandSlug":
+            "fila",
+        "model":
+            ‴Disruptor II
+            ¨fr:Disruptor II
+            ¨de:Disruptor II
+            ¨es:Disruptor II
+            ¨pt:Disruptor II‴,
+        "price":
+            60,
+        "sizeSlugArray":
+            [
+                "extra-small",
+                "small",
+                "medium",
+                "large"
+            ],
+        "imagePath":
+            "/static/image/product/product_12.avif"
+    },
+    {
+        "genderSlug":
+            "men",
+        "categorySlug":
+            "casual",
+        "brandSlug":
+            "converse",
+        "model":
+            ‴Chuck Taylor All Star
+            ¨fr:Chuck Taylor All Star
+            ¨de:Chuck Taylor All Star
+            ¨es:Chuck Taylor All Star
+            ¨pt:Chuck Taylor All Star‴,
+        "price":
+            55,
+        "sizeSlugArray":
+            [
+                "small",
+                "medium",
+                "large"
+            ],
+        "imagePath":
+            "/static/image/product/product_13.avif"
+    },
+    {
+        "genderSlug":
+            "women",
+        "categorySlug":
+            "running",
+        "brandSlug":
+            "vans",
+        "model":
+            ‴Old Skool
+            ¨fr:Old Skool
+            ¨de:Old Skool
+            ¨es:Old Skool
+            ¨pt:Old Skool‴,
+        "price":
+            65,
+        "sizeSlugArray":
+            [
+                "extra-small",
+                "small",
+                "medium",
+                "large"
+            ],
+        "imagePath":
+            "/static/image/product/product_14.avif"
+    },
+    {
+        "genderSlug":
+            "men",
+        "categorySlug":
+            "tennis",
+        "brandSlug":
+            "altra",
+        "model":
+            ‴Lone Peak 6
+            ¨fr:Lone Peak 6
+            ¨de:Lone Peak 6
+            ¨es:Lone Peak 6
+            ¨pt:Lone Peak 6‴,
+        "price":
+            120,
+        "sizeSlugArray":
+            [
+                "small",
+                "medium",
+                "large",
+                "extra-large"
+            ],
+        "imagePath":
+            "/static/image/product/product_15.avif"
+    },
+    {
+        "genderSlug":
+            "women",
+        "categorySlug":
+            "casual",
+        "brandSlug":
+            "diadora",
+        "model":
+            ‴B. Elite
+            ¨fr:B. Elite
+            ¨de:B. Elite
+            ¨es:B. Elite
+            ¨pt:B. Elite‴,
+        "price":
+            80,
+        "sizeSlugArray":
+            [
+                "extra-small",
+                "small",
+                "medium"
+            ],
+        "imagePath":
+            "/static/image/product/product_16.avif"
+    },
+    {
+        "genderSlug":
+            "men",
+        "categorySlug":
+            "running",
+        "brandSlug":
+            "merrell",
+        "model":
+            ‴Moab 3 Vent
+            ¨fr:Moab 3 Vent
+            ¨de:Moab 3 Vent
+            ¨es:Moab 3 Vent
+            ¨pt:Moab 3 Vent‴,
+        "price":
+            110,
+        "sizeSlugArray":
+            [
+                "small",
+                "medium",
+                "large",
+                "extra-large"
+            ],
+        "imagePath":
+            "/static/image/product/product_17.avif"
+    },
+    {
+        "genderSlug":
+            "women",
+        "categorySlug":
+            "tennis",
+        "brandSlug":
+            "nike",
+        "model":
+            ‴Air Force 1
+            ¨fr:Air Force 1
+            ¨de:Air Force 1
+            ¨es:Air Force 1
+            ¨pt:Air Force 1‴,
+        "price":
+            90,
+        "sizeSlugArray":
+            [
+                "extra-small",
+                "small",
+                "medium",
+                "large"
+            ],
+        "imagePath":
+            "/static/image/product/product_18.avif"
+    }
+]

@@ -1,0 +1,86 @@
+[
+    {
+        "id":
+            1,
+        "title":
+            ‴The Ultimate Guide to Choosing Running Shoes
+            ¨fr:Le guide ultime pour choisir ses chaussures de running
+            ¨de:Der ultimative Leitfaden zur Auswahl von Laufschuhen
+            ¨es:La guía definitiva para elegir zapatillas de running
+            ¨pt:O guia definitivo para escolher ténis de corrida‴,
+        "excerpt":
+            ‴Learn how to select the perfect running shoes for your foot type and running style.
+            ¨fr:Apprenez à choisir les chaussures de running idéales selon votre morphologie et votre style de course.
+            ¨de:Erfahren Sie, wie Sie die perfekten Laufschuhe für Ihren Fußtyp und Laufstil finden.
+            ¨es:Aprenda a elegir las zapatillas de running perfectas según su tipo de pie y estilo de carrera.
+            ¨pt:Aprenda a escolher os ténis de corrida perfeitos para o seu tipo de pé e estilo de corrida.‴,
+        "date":
+            "2025-01-15",
+        "author":
+            "Sarah Johnson",
+        "image":
+            "/logo.svg",
+        "category":
+            ‴Running
+            ¨fr:Course
+            ¨de:Laufen
+            ¨es:Running
+            ¨pt:Corrida‴
+    },
+    {
+        "id":
+            2,
+        "title":
+            ‴Sneaker Trends for 2025
+            ¨fr:Tendances sneakers 2025
+            ¨de:Sneaker-Trends 2025
+            ¨es:Tendencias en sneakers 2025
+            ¨pt:Tendências em sneakers 2025‴,
+        "excerpt":
+            ‴Discover the latest sneaker trends and styles that will dominate this year.
+            ¨fr:Découvrez les dernières tendances et styles sneakers qui marqueront cette année.
+            ¨de:Entdecken Sie die neuesten Sneaker-Trends und Styles, die dieses Jahr dominieren werden.
+            ¨es:Descubra las últimas tendencias y estilos en sneakers que dominarán este año.
+            ¨pt:Descubra as últimas tendências e estilos em sneakers que vão dominar este ano.‴,
+        "date":
+            "2025-01-10",
+        "author":
+            "Mike Chen",
+        "image":
+            "/logo.svg",
+        "category":
+            ‴Fashion
+            ¨fr:Mode
+            ¨de:Mode
+            ¨es:Moda
+            ¨pt:Moda‴
+    },
+    {
+        "id":
+            3,
+        "title":
+            ‴How to Care for Your Leather Shoes
+            ¨fr:Comment entretenir vos chaussures en cuir
+            ¨de:So pflegen Sie Ihre Lederschuhe
+            ¨es:Cómo cuidar sus zapatos de cuero
+            ¨pt:Como cuidar dos seus sapatos de couro‴,
+        "excerpt":
+            ‴Essential tips for maintaining and extending the life of your leather footwear.
+            ¨fr:Conseils essentiels pour entretenir et prolonger la durée de vie de vos chaussures en cuir.
+            ¨de:Wichtige Tipps zur Pflege und Verlängerung der Lebensdauer Ihres Lederschuhwerks.
+            ¨es:Consejos esenciales para mantener y prolongar la vida de su calzado de cuero.
+            ¨pt:Dicas essenciais para manter e prolongar a vida útil do seu calçado de couro.‴,
+        "date":
+            "2025-01-05",
+        "author":
+            "Emily Davis",
+        "image":
+            "/logo.svg",
+        "category":
+            ‴Care
+            ¨fr:Entretien
+            ¨de:Pflege
+            ¨es:Cuidado
+            ¨pt:Cuidado‴
+    }
+]

@@ -1,0 +1,46 @@
+// -- IMPORTS
+
+import { getLocalizedText } from "senselogic-lingo";
+import type { PageViewData } from "../lib/application_data";
+
+// -- TYPES
+
+export interface Input {
+    pageData: PageViewData;
+}
+
+<footer class="footer-menu">
+    <div class="footer-menu-container">
+        <div class="footer-menu-brand">
+            <p class="footer-menu-brand-title">
+                ${getLocalizedText( input.pageData.homePage.title as string, input.pageData.languageTag )}
+            </p>
+            <p class="footer-menu-brand-tagline">
+                ${getLocalizedText( input.pageData.footerMenu.tagline, input.pageData.languageTag )}
+            </p>
+        </div>
+        <nav class="footer-menu-nav">
+            <ul class="footer-menu-list">
+                <for|menuButtonItem| of=input.pageData.footerMenu.menuButtonArray>
+                    <li class="footer-menu-item">
+                        <a
+                            href=(
+                                menuButtonItem.route === ""
+                                        ? `/${ input.pageData.languageTag }`
+                                        : `/${ input.pageData.languageTag }/${ menuButtonItem.route }`
+                                )
+                            class="footer-menu-button"
+                        >
+                            <span class="footer-menu-button-text">
+                                ${getLocalizedText( menuButtonItem.text, input.pageData.languageTag )}
+                            </span>
+                        </a>
+                    </li>
+                </for>
+            </ul>
+        </nav>
+        <p class="footer-menu-copyright">
+            ${getLocalizedText( input.pageData.footerMenu.copyrightText, input.pageData.languageTag )}
+        </p>
+    </div>
+</footer>

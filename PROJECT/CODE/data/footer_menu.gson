@@ -1,0 +1,77 @@
+{
+    "tagline":
+        ‴Premium footwear for every occasion
+        ¨fr:Chaussures premium pour chaque occasion
+        ¨de:Premium-Schuhe für jeden Anlass
+        ¨es:Calzado premium para cada ocasión
+        ¨pt:Calçado premium para cada ocasião‴,
+    "copyrightText":
+        ‴© Miko Project. All rights reserved.
+        ¨fr:© Miko Project. Tous droits réservés.
+        ¨de:© Miko Project. Alle Rechte vorbehalten.
+        ¨es:© Miko Project. Todos los derechos reservados.
+        ¨pt:© Miko Project. Todos os direitos reservados.‴,
+    "menuButtonArray":
+        [
+            {
+                "text":
+                    ‴Home
+                    ¨fr:Accueil
+                    ¨de:Startseite
+                    ¨es:Inicio
+                    ¨pt:Início‴,
+                "route":
+                    ""
+            },
+            {
+                "text":
+                    ‴About
+                    ¨fr:À propos
+                    ¨de:Über uns
+                    ¨es:Sobre nosotros
+                    ¨pt:Sobre nós‴,
+                "route":
+                    "about"
+            },
+            {
+                "text":
+                    ‴Products
+                    ¨fr:Produits
+                    ¨de:Produkte
+                    ¨es:Productos
+                    ¨pt:Produtos‴,
+                "route":
+                    "products"
+            },
+            {
+                "text":
+                    ‴Testimonials
+                    ¨fr:Témoignages
+                    ¨de:Kundenstimmen
+                    ¨es:Testimonios
+                    ¨pt:Testemunhos‴,
+                "route":
+                    "testimonials"
+            },
+            {
+                "text":
+                    ‴Contact
+                    ¨fr:Contact
+                    ¨de:Kontakt
+                    ¨es:Contacto
+                    ¨pt:Contacto‴,
+                "route":
+                    "contact"
+            },
+            {
+                "text":
+                    ‴Blog
+                    ¨fr:Blog
+                    ¨de:Blog
+                    ¨es:Blog
+                    ¨pt:Blog‴,
+                "route":
+                    "blog"
+            }
+        ]
+}

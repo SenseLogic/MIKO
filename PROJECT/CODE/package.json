@@ -1,0 +1,30 @@
+{
+  "name": "miko-project",
+  "description": "The default Marko starter app with TypeScript",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@supabase/ssr": "^0.8.0",
+    "cookie": "^1.0.2",
+    "marko": "^6.3.42",
+    "resend": "^6.7.0",
+    "senselogic-gson-file": "^0.4.0",
+    "senselogic-iota": "^0.1.0",
+    "senselogic-lingo": "^0.1.9",
+    "senselogic-opus": "^0.1.1",
+    "senselogic-pika": "^0.1.0",
+    "stripe": "^20.2.0"
+  },
+  "devDependencies": {
+    "@marko/run": "^0.11.12",
+    "stylus": "^0.60.0"
+  },
+  "private": true,
+  "scripts": {
+    "build-stylus": "node build-stylus.mjs",
+    "dev": "npm run build-stylus && marko-run",
+    "build": "npm run build-stylus && marko-run build",
+    "preview": "marko-run preview",
+    "start": "node --enable-source-maps ./dist/index.mjs"
+  }
+}

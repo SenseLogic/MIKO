@@ -1,0 +1,48 @@
+// -- IMPORTS
+
+import { getLocalizedText } from "senselogic-lingo";
+import LanguageMenu from "./language-menu.marko";
+import type { PageViewData } from "../lib/application_data";
+
+// -- TYPES
+
+export interface Input {
+    pageData: PageViewData;
+}
+
+<header class="header-menu">
+    <div class="header-menu-container">
+        <div class="header-menu-logo">
+            <h1 class="header-menu-logo-text">
+                ${getLocalizedText( input.pageData.homePage.title as string, input.pageData.languageTag )}
+            </h1>
+        </div>
+        <nav class="header-menu-nav">
+            <ul class="header-menu-list">
+                <for|menuButtonItem| of=input.pageData.headerMenu.menuButtonArray>
+                    <li class="header-menu-item">
+                        <a
+                            href=(
+                                menuButtonItem.route === ""
+                                        ? `/${ input.pageData.languageTag }`
+                                        : `/${ input.pageData.languageTag }/${ menuButtonItem.route }`
+                                )
+                            class="header-menu-button"
+                        >
+                            <span class="header-menu-button-text">
+                                ${getLocalizedText( menuButtonItem.text, input.pageData.languageTag )}
+                            </span>
+                        </a>
+                    </li>
+                </for>
+            </ul>
+        </nav>
+        <div class="header-menu-language">
+            <LanguageMenu
+                languageTag=input.pageData.languageTag
+                languageByTagMap=input.pageData.languageByTagMap
+                pageUrlByLanguageTagMap=input.pageData.pageUrlByLanguageTagMap
+            />
+        </div>
+    </div>
+</header>

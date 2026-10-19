@@ -1,0 +1,349 @@
+---
+description: TypeScript coding standards
+globs:
+  - "**/*.ts"
+  - "**/*.styl"
+  - "**/*.marko"
+alwaysApply: true
+---
+# TypeScript Coding Standards
+
+Every single line of TypeScript source code of this codebase must strictly adhere to the following rules, without any exception. Those rules must be treated as a hard rule system, not stylistic preference.
+
+## Formatting
+
+- It is forbidden to format the TypeScript code with `prettier`, `biome`, `dprint`, `eslint`, `deno fmt`, etc.
+- Four-space indentation: use exactly four spaces per nesting level; do not use tabs for indentation. This applies to TypeScript, HTML, CSS and any other code of this project.
+- Prefer explicit and readable code over compact code.
+- Aligned braces (Allman style) and keep the opening and closing braces always alone on their own line.
+- Each function parameter definition must be on its own line with the closing `)` of the parameter list starting its own line.
+- When an arrow function definition spans multiple lines, the arrow `=>` must end its own line, and the function code must be indented on the next line(s).
+- When a `return` statement spans multiple lines, the `return` keyword must end its own line, and the return expression value must be indented on the next line(s).
+- When the field value after `:` spans multiple lines, the `:` must end its own line, and the field value must be indented on the next line(s).
+- When an opening `(` ends its own line, the matching closing `)` must start its own line and be aligned with the first character of the indented argument block.
+- When an opening `[` ends its own line, the matching closing `]` must start its own line and be aligned with the first character of the indented element block.
+- In multiline boolean expressions, put `&&` and `||` at the start of the continued line, aligned with the first character of its first left operand.
+- In multiline arithmetic expressions, put the operator (`+`, etc) at the start of the continued line, aligned with the first character of its first left operand.
+- When an assignment spans multiple lines, the assignment operator (`=`, `+=`, etc) must be indented on the next line and start the first line of the right-hand side value.
+- For non-empty `()` and `[]`, add spaces inside delimiters: `xxxxx( 10, xxxxx[ 10 ] )`. Keep empty pairs compact: `xxxxx()`, `xxxxx[]`.
+- Keep a blank line before and after a multiline call or assignment, unless it is after the opening `{` of a block or before the closing `}` of a block.
+- Keep a blank line before `return`, `if`, `for`, `while`, `for-in`, `for-of`, `switch`, `try`, `catch`, `finally`, `do`, and `else` when the previous non-empty line does not end with `{`.
+- `;` after all statements.
+- No space before `;`.
+- No trailing commas in any comma-separated construct.
+
+## Naming and sections
+
+- Self-documenting code only (prefer descriptive names over explanatory comments).
+- Identifiers follow usual English ordering rules (`FirstPointCloudIndex`, `ConfigurationFilePath`, `PointCloudFolderPath`) and use no shortened words, abbreviations (except `Url`) or single-letter names (except for axis names in 3D vectors).
+- No plural-form identifiers.
+- Arrow functions can only be used for getters, field values and call arguments. They can't be used to define the constructors and methods of a class.
+- Use standard section comments:
+  - `// -- IMPORTS`
+  - `// -- CONSTANTS`
+  - `// -- TYPES`
+  - `// -- ATTRIBUTES`
+  - `// -- CONSTRUCTORS`
+  - `// -- OPERATORS`
+  - `// -- INQUIRIES` (for methods not changing the type data)
+  - `// -- OPERATIONS` (for methods changing the type data)
+  - `// -- VARIABLES` (for global variables)
+  - `// -- FUNCTIONS` (for global functions)
+  - `// -- STATEMENTS` (for global statements)
+- Standard section comments must only be present for non-empty sections.
+- Insert a standard separating comment `// ~~` between types, methods or functions defined within the same standard section.
+- Keep an empty line before and after any of those `// -- ...' and `// ~~` standard section and separating comments, unless the standard comment is at the start of a file or `{` block.
+- Try to define the code inside sections following the same order as the above section comments, and within those sections, define constants, types, attributes, methods etc before the other elements of code that are using them (i.e. having the used code defined before the code that uses it, allowing for single-read full code understanding).
+- Use `Array` or `Map` suffixes matching the collection type (`ProductArray`, `ProductByIdMap`, `productArray`, `productByIdMap`).
+- Use the `Index` suffix for element indices (`ProductIndex`, `productIndex`).
+- Use the `Count` suffix for element counts (`ProductCount`, `productCount`).
+- Use `PascalCase` for classes, constructors, and public constants at module scope.
+- Use `camelCase` for methods, functions, parameters, local variables, object properties, and enum-like members on constant objects.
+- Prefer `let` over `const` even when the variable is not reassigned, using `const` only for true fixed constants defined at class or module level.
+
+## Control flow
+
+- Use structured positive-branch control flow:
+  - Keep the main execution path inside the positive branch of conditions.
+  - Place early exit statements (`return`, `break`, `continue`, `throw`, etc.) inside the negative branch (`else`) whenever the conditional also contains the main execution path.
+  - Avoid inverted guard conditions that move the primary logic outside the conditional structure.
+
+  Always prefer:
+
+  ```
+  if ( someCondition )
+  {
+      for ( someLoop )
+      {
+          if ( someOtherCondition )
+          {
+              doSomething();
+          }
+          else
+          {
+              break;
+          }
+      }
+  }
+  ```
+
+  Instead of:
+
+  ```
+  if ( !someCondition )
+  {
+      return;
+  }
+
+  for ( someLoop )
+  {
+      if ( !someOtherCondition )
+      {
+          break;
+      }
+
+      doSomething();
+  }
+  ```
+
+## Data evolution
+
+- Don't add any legacy data compatibility code to the codebase when some data structures change. As this project is still not deployed in production, the code and data must remain perfecly in sync.
+
+## Styling Conventions
+
+- Do not introduce Tailwind CSS or utility-class frameworks.
+- Only use semantic CSS defined in global or shared Stylus files.
+- CSS classes specific to a component or island must be prefixed with the component name in `slug-case`
+- Use unitless values for line heights.
+- Use rem values for font sizes and all other static sizes (only multiples of 0.1rem or 0.25rem).
+- Use px values only for tiny static sizes (i.e. 1px or 2px).
+- Use maximum one decimal in your sizes (1rem, 2.5rem), unless for multiple of 0.25rem.
+- Use standard section comments to group CSS rules by category:
+  - `// -- IMPORTS`
+  - `// -- CONSTANTS`
+  - `// -- VARIABLES`
+  - `// -- FUNCTIONS`
+  - `// -- MIXINS`
+  - `// -- FONTS` (for @font-face definitions)
+  - `// -- ELEMENTS`
+  - `// -- CLASSES`
+
+## TypeScript reference sample
+
+```typescript
+// -- CONSTANTS
+
+const
+    minimumPassCount: number = 0,
+    maximumPassCount: number = 5;
+
+// -- TYPES
+
+interface AgeInterval
+{
+    firstAge: number;
+    lastAge: number;
+}
+
+// ~~
+
+class Being
+{
+    // -- ATTRIBUTES
+
+    name: string;
+    age: number;
+
+    // -- CONSTRUCTORS
+
+    constructor(
+        name: string,
+        age: number
+        )
+    {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+// ~~
+
+class Person
+    extends Being
+{
+    // -- ATTRIBUTES
+
+    weight: number;
+    dogCount: number;
+
+    // -- CONSTRUCTORS
+
+    constructor(
+        name: string,
+        age: number,
+        weight: number,
+        dogCount: number
+        )
+    {
+        super( name, age );
+        this.weight = weight;
+        this.dogCount = dogCount;
+    }
+
+    // -- INQUIRIES
+
+    getAge(
+        ): number
+    {
+        return this.age;
+    }
+
+    // ~~
+
+    getAgeOffset(
+        otherAge: number
+        ): number
+    {
+        return otherAge - this.age;
+    }
+
+    // ~~
+
+    getHelloMessage(
+        ): string
+    {
+        return `Hello, my name is ${ this.name }, I'm ${ this.age } years old and I weight ${ this.weight } kilograms.`;
+    }
+
+    // -- OPERATIONS
+
+    setAge(
+        age: number
+        ): void
+    {
+        this.age = age;
+    }
+
+    // ~~
+
+    setFakeAge(
+        age: number
+        ): void
+    {
+        if ( age > 0
+             && age < 50
+             && ( age < 20
+                  || age > 40 ) )
+        {
+            this.age
+                += ( age
+                     + ( age - 2 )
+                     + ( age
+                         * ( age + 10 )
+                         * ( age + 20 ) ) )
+                   + this.getAgeOffset(
+                         age * 2
+                         - 20
+                         );
+        }
+        else if ( age > 20
+                  && age < 40
+                  && ( age < 25
+                       || age > 35 ) )
+        {
+            this.age = Math.round( age * 0.5 );
+        }
+        else
+        {
+            this.age = age + 10;
+        }
+    }
+}
+
+// -- FUNCTIONS
+
+function getAgeInterval(
+    sortedPersonArray: Person[]
+    ): AgeInterval | null
+{
+    if ( sortedPersonArray.length === 0 )
+    {
+        return null;
+    }
+    else
+    {
+        return (
+            {
+                firstAge: sortedPersonArray[ 0 ].age,
+                lastAge: sortedPersonArray[ sortedPersonArray.length - 1 ].age
+            }
+            );
+    }
+}
+
+// ~~
+
+function main(
+    ): void
+{
+    let passIndex: number = 0;
+
+    while ( passIndex < 5 )
+    {
+        ++passIndex;
+    }
+
+    do
+    {
+        ++passIndex;
+    }
+    while ( passIndex < 10 );
+
+    let personArray: Person[]
+        = [
+            new Person( 'Mike', 49, 85, 1 ),
+            new Person( 'Luke', 30, 77, 0 ),
+            new Person( 'John', 30, 72, 3 )
+        ];
+
+    personArray.sort(
+        ( firstPerson: Person, secondPerson: Person ): number =>
+        {
+            try
+            {
+                if ( firstPerson.age !== secondPerson.age )
+                {
+                    return firstPerson.age - secondPerson.age;
+                }
+                else
+                {
+                    return firstPerson.weight - secondPerson.weight;
+                }
+            }
+            catch ( error )
+            {
+                console.log( error.toString() );
+            }
+
+            return 0;
+        }
+        );
+
+    let ageInterval: AgeInterval | null = getAgeInterval( personArray );
+
+    if ( ageInterval !== null )
+    {
+        console.log( `First age: ${ ageInterval.firstAge }` );
+        console.log( `Last age: ${ ageInterval.lastAge }` );
+    }
+    else
+    {
+        console.log( 'No age interval' );
+    }
+}
+
+// -- STATEMENTS
+
+main();
+```

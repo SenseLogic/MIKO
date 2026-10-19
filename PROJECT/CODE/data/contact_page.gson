@@ -1,0 +1,78 @@
+{
+    "title":
+        ‴Contact Us
+        ¨fr:Contactez-nous
+        ¨de:Kontakt
+        ¨es:Contáctenos
+        ¨pt:Contacte-nos‴,
+    "text":
+        ‴Lorem ipsum
+        ¨fr:Lorem ipsum
+        ¨de:Lorem ipsum
+        ¨es:Lorem ipsum
+        ¨pt:Lorem ipsum‴,
+    "namePlaceholder":
+        ‴Name
+        ¨fr:Nom
+        ¨de:Name
+        ¨es:Nombre
+        ¨pt:Nome‴,
+    "emailPlaceholder":
+        ‴Email
+        ¨fr:E-mail
+        ¨de:E-Mail
+        ¨es:Correo electrónico
+        ¨pt:E-mail‴,
+    "messagePlaceholder":
+        ‴Message
+        ¨fr:Message
+        ¨de:Nachricht
+        ¨es:Mensaje
+        ¨pt:Mensagem‴,
+    "sendButton":
+        ‴Send
+        ¨fr:Envoyer
+        ¨de:Senden
+        ¨es:Enviar
+        ¨pt:Enviar‴,
+    "email":
+        "contact@miko-project.com",
+    "phone":
+        "+1 (555) 123-4567",
+    "address":
+        ‴123 Shoe Street
+        ¨fr:123, rue des Chaussures
+        ¨de:Schuhstraße 123
+        ¨es:Calle del Zapato 123
+        ¨pt:Rua dos Sapatos, 123‴,
+    "city":
+        ‴Fashion District
+        ¨fr:Quartier de la mode
+        ¨de:Modeviertel
+        ¨es:Distrito de la moda
+        ¨pt:Distrito da moda‴,
+    "state":
+        ‴New York, NY 10001
+        ¨fr:New York, NY 10001
+        ¨de:New York, NY 10001
+        ¨es:Nueva York, NY 10001
+        ¨pt:Nova Iorque, NY 10001‴,
+    "businessHours1":
+        ‴Monday - Friday: 9:00 AM - 6:00 PM
+        ¨fr:Lundi - vendredi : 9 h - 18 h
+        ¨de:Montag - Freitag: 9:00 - 18:00 Uhr
+        ¨es:Lunes - viernes: 9:00 - 18:00
+        ¨pt:Segunda - sexta: 9h00 - 18h00‴,
+    "businessHours2":
+        ‴Saturday: 10:00 AM - 4:00 PM
+        ¨fr:Samedi : 10 h - 16 h
+        ¨de:Samstag: 10:00 - 16:00 Uhr
+        ¨es:Sábado: 10:00 - 16:00
+        ¨pt:Sábado: 10h00 - 16h00‴,
+    "businessHours3":
+        ‴Sunday: Closed
+        ¨fr:Dimanche : fermé
+        ¨de:Sonntag: geschlossen
+        ¨es:Domingo: cerrado
+        ¨pt:Domingo: encerrado‴
+}

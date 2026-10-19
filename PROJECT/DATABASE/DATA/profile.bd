@@ -1,0 +1,18 @@
+PROFILE
+
+    userId firstName lastName email
+
+        8409d2a1-70da-4f3b-81b9-e580c9d2cbb2
+            ~ Han
+            ~ Solo
+            ~ han.solo@miko-project.com
+
+        bd6fa520-011a-49b4-a82e-88953f1c1f26
+            ~ Luke
+            ~ Skywalker
+            ~ luke.skywalker@miko-project.com
+
+        01ddfa8f-4fe3-4ea3-adc4-bb93dfd87ac8
+            ~ Obi-Wan
+            ~ Kenobi
+            ~ obi-wan.kenobi@miko-project.com

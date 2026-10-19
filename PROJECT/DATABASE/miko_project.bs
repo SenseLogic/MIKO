@@ -1,0 +1,21 @@
+public
+
+    CONTACT | dropped
+
+        id : TUID | key, unique
+        name : STRING
+        email : STRING
+        message : STRING
+        creationTimestamp : TIMESTAMP | generated
+        updateTimestamp : TIMESTAMP | generated, updated
+
+    PROFILE | dropped
+
+        id : TUID | key, unique
+        userId : UUID | linked auth.users
+        firstName : STRING
+        lastName : STRING
+        email : STRING
+        phoneNumber : STRING
+        creationTimestamp : TIMESTAMP | generated
+        updateTimestamp : TIMESTAMP | generated, updated

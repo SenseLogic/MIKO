@@ -1,0 +1,32 @@
+{
+    "extra-small":
+        ‴XS
+        ¨fr:XS
+        ¨de:XS
+        ¨es:XS
+        ¨pt:XS‴,
+    "small":
+        ‴S
+        ¨fr:S
+        ¨de:S
+        ¨es:S
+        ¨pt:S‴,
+    "medium":
+        ‴M
+        ¨fr:M
+        ¨de:M
+        ¨es:M
+        ¨pt:M‴,
+    "large":
+        ‴L
+        ¨fr:L
+        ¨de:L
+        ¨es:L
+        ¨pt:L‴,
+    "extra-large":
+        ‴XL
+        ¨fr:XL
+        ¨de:XL
+        ¨es:XL
+        ¨pt:XL‴
+}

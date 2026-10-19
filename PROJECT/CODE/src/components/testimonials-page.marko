@@ -1,0 +1,65 @@
+// -- IMPORTS
+
+import { getLocalizedText } from "senselogic-lingo";
+import FooterMenu from "./footer-menu.marko";
+import HeaderMenu from "./header-menu.marko";
+import type { PageViewData } from "../lib/application_data";
+
+// -- TYPES
+
+export interface Input {
+    pageData: PageViewData;
+}
+
+<HeaderMenu pageData=input.pageData/>
+<div class="testimonials-page">
+    <section class="testimonials-page-hero">
+        <div class="testimonials-page-hero-container">
+            <h1 class="testimonials-page-hero-title">
+                ${getLocalizedText( input.pageData.testimonialsPage!.title, input.pageData.languageTag )}
+            </h1>
+            <p class="testimonials-page-hero-subtitle">
+                ${getLocalizedText( input.pageData.testimonialsPage!.text, input.pageData.languageTag )}
+            </p>
+        </div>
+    </section>
+
+    <section class="testimonials-page-grid">
+        <div class="testimonials-page-grid-container">
+            <for|testimonialItem| of=input.pageData.testimonialArray ?? []>
+                <div class="testimonials-page-testimonial">
+                    <div class="testimonials-page-testimonial-header">
+                        <div class="testimonials-page-testimonial-image">
+                            <img
+                                src=testimonialItem.imagePath || "/logo.svg"
+                                alt=testimonialItem.name
+                                class="testimonials-page-testimonial-img"
+                            >
+                        </div>
+                        <div class="testimonials-page-testimonial-info">
+                            <h3 class="testimonials-page-testimonial-name">${testimonialItem.name}</h3>
+                            <p class="testimonials-page-testimonial-date">${testimonialItem.date}</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonials-page-testimonial-rating">
+                        <for|starIndex| from=0 until=5>
+                            <span
+                                class=(
+                                    starIndex < testimonialItem.rating
+                                            ? "testimonials-page-testimonial-star testimonials-page-testimonial-star-filled"
+                                            : "testimonials-page-testimonial-star"
+                                    )
+                            >⭐</span>
+                        </for>
+                    </div>
+
+                    <blockquote class="testimonials-page-testimonial-text">
+                        ${getLocalizedText( testimonialItem.text, input.pageData.languageTag )}
+                    </blockquote>
+                </div>
+            </for>
+        </div>
+    </section>
+</div>
+<FooterMenu pageData=input.pageData/>

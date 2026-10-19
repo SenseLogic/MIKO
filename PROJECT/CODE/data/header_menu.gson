@@ -1,0 +1,65 @@
+{
+    "menuButtonArray":
+        [
+            {
+                "text":
+                    ‴Home
+                    ¨fr:Accueil
+                    ¨de:Startseite
+                    ¨es:Inicio
+                    ¨pt:Início‴,
+                "route":
+                    ""
+            },
+            {
+                "text":
+                    ‴About
+                    ¨fr:À propos
+                    ¨de:Über uns
+                    ¨es:Sobre nosotros
+                    ¨pt:Sobre nós‴,
+                "route":
+                    "about"
+            },
+            {
+                "text":
+                    ‴Products
+                    ¨fr:Produits
+                    ¨de:Produkte
+                    ¨es:Productos
+                    ¨pt:Produtos‴,
+                "route":
+                    "products"
+            },
+            {
+                "text":
+                    ‴Testimonials
+                    ¨fr:Témoignages
+                    ¨de:Kundenstimmen
+                    ¨es:Testimonios
+                    ¨pt:Testemunhos‴,
+                "route":
+                    "testimonials"
+            },
+            {
+                "text":
+                    ‴Contact
+                    ¨fr:Contact
+                    ¨de:Kontakt
+                    ¨es:Contacto
+                    ¨pt:Contacto‴,
+                "route":
+                    "contact"
+            },
+            {
+                "text":
+                    ‴Blog
+                    ¨fr:Blog
+                    ¨de:Blog
+                    ¨es:Blog
+                    ¨pt:Blog‴,
+                "route":
+                    "blog"
+            }
+        ]
+}

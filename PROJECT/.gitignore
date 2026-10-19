@@ -1,0 +1,5 @@
+define_develop_environment_variables.bat
+define_master_environment_variables.bat
+define_release_environment_variables.bat
+Thumbs.db
+DATABASE/*.sql

@@ -1,0 +1,98 @@
+[
+    {
+        "date":
+            "2025/02/03",
+        "name":
+            "Sarah Johnson",
+        "text":
+            ‴I adore my NewBalance sneakers! They're stylish and incredibly comfy. Your e-commerce site made shopping a breeze. I'll be a loyal customer!
+            ¨fr:J'adore mes sneakers New Balance ! Elles sont élégantes et incroyablement confortables. Votre site e-commerce a rendu les achats faciles. Je serai une cliente fidèle !
+            ¨de:Ich liebe meine New-Balance-Sneaker! Sie sind stylisch und unglaublich bequem. Ihre E-Commerce-Seite machte das Einkaufen zum Kinderspiel. Ich werde treuer Kunde!
+            ¨es:¡Adoro mis sneakers New Balance! Son elegantes e increíblemente cómodas. Su sitio de comercio electrónico hizo que comprar fuera muy fácil. ¡Seré cliente fiel!
+            ¨pt:Adoro os meus sneakers New Balance! São elegantes e incrivelmente confortáveis. O seu site de e-commerce tornou as compras muito fáceis. Serei cliente fiel!‴,
+        "rating":
+            5,
+        "imagePath":
+            "/static/image/testimonial/testimonial_1.avif"
+    },
+    {
+        "date":
+            "2025/02/03",
+        "name":
+            "Alex Rodriguez",
+        "text":
+            ‴These shoes are absolutely perfect for my daily runs! The cushioning is amazing and they've held up beautifully after months of use. Best purchase ever!
+            ¨fr:Ces chaussures sont parfaites pour mes courses quotidiennes ! L'amorti est incroyable et elles ont très bien résisté après des mois d'utilisation. Meilleur achat !
+            ¨de:Diese Schuhe sind perfekt für meine täglichen Läufe! Die Dämpfung ist fantastisch und sie haben sich nach Monaten hervorragend bewährt. Bester Kauf ever!
+            ¨es:¡Estos zapatos son perfectos para mis carreras diarias! La amortiguación es increíble y han aguantado muy bien tras meses de uso. ¡La mejor compra!
+            ¨pt:Estes sapatos são perfeitos para as minhas corridas diárias! A amortização é incrível e aguentaram-se muito bem após meses de uso. Melhor compra de sempre!‴,
+        "rating":
+            5,
+        "imagePath":
+            "/static/image/testimonial/testimonial_2.avif"
+    },
+    {
+        "date":
+            "2025/02/03",
+        "name":
+            "Jessica Chen",
+        "text":
+            ‴Incredible quality and style! I get compliments every time I wear these. The ordering process was smooth and delivery was lightning fast. Highly recommend!
+            ¨fr:Qualité et style incroyables ! Je reçois des compliments à chaque fois que je les porte. La commande était simple et la livraison ultra rapide. Je recommande vivement !
+            ¨de:Unglaubliche Qualität und Stil! Ich bekomme jedes Mal Komplimente, wenn ich sie trage. Die Bestellung war einfach und die Lieferung blitzschnell. Sehr empfehlenswert!
+            ¨es:¡Calidad y estilo increíbles! Recibo cumplidos cada vez que las llevo. El pedido fue sencillo y la entrega rapidísima. ¡Muy recomendable!
+            ¨pt:Qualidade e estilo incríveis! Recebo elogios sempre que as uso. O pedido foi simples e a entrega foi rapidíssima. Recomendo vivamente!‴,
+        "rating":
+            5,
+        "imagePath":
+            "/static/image/testimonial/testimonial_3.avif"
+    },
+    {
+        "date":
+            "2025/02/03",
+        "name":
+            "Michael Brown",
+        "text":
+            ‴These sneakers are a game changer! The quality and design are top-notch, and the delivery was super fast. Highly recommend!
+            ¨fr:Ces sneakers changent la donne ! La qualité et le design sont au top, et la livraison a été super rapide. Je recommande vivement !
+            ¨de:Diese Sneaker sind ein Gamechanger! Qualität und Design sind erstklassig, und die Lieferung war super schnell. Sehr empfehlenswert!
+            ¨es:¡Estas sneakers son revolucionarias! La calidad y el diseño son excelentes, y la entrega fue rapidísima. ¡Muy recomendable!
+            ¨pt:Estas sneakers são revolucionárias! A qualidade e o design são de topo, e a entrega foi super rápida. Recomendo vivamente!‴,
+        "rating":
+            4,
+        "imagePath":
+            "/static/image/testimonial/testimonial_1.avif"
+    },
+    {
+        "date":
+            "2025/02/03",
+        "name":
+            "Emily Davis",
+        "text":
+            ‴Absolutely love the fit and comfort of these shoes! The website was easy to navigate, and I got a great deal. Will shop again!
+            ¨fr:J'adore le confort et la coupe de ces chaussures ! Le site était facile à parcourir et j'ai fait une excellente affaire. J'achèterai à nouveau !
+            ¨de:Ich liebe Passform und Komfort dieser Schuhe! Die Website war leicht zu bedienen und ich habe ein tolles Angebot bekommen. Ich werde wieder einkaufen!
+            ¨es:¡Me encantan el ajuste y la comodidad de estos zapatos! La web era fácil de usar y conseguí una gran oferta. ¡Volveré a comprar!
+            ¨pt:Adoro o ajuste e o conforto destes sapatos! O site era fácil de navegar e consegui um ótimo negócio. Voltarei a comprar!‴,
+        "rating":
+            5,
+        "imagePath":
+            "/static/image/testimonial/testimonial_2.avif"
+    },
+    {
+        "date":
+            "2025/02/03",
+        "name":
+            "David Wilson",
+        "text":
+            ‴Great shoes with excellent support! The customer service was friendly, and the checkout process was smooth. Great experience!
+            ¨fr:Excellentes chaussures avec un super maintien ! Le service client était sympathique et le paiement fluide. Excellente expérience !
+            ¨de:Tolle Schuhe mit hervorragender Unterstützung! Der Kundenservice war freundlich und der Checkout reibungslos. Tolle Erfahrung!
+            ¨es:¡Zapatos geniales con excelente soporte! El servicio al cliente fue amable y el pago fue sencillo. ¡Gran experiencia!
+            ¨pt:Ótimos sapatos com excelente suporte! O apoio ao cliente foi simpático e o checkout foi fluido. Ótima experiência!‴,
+        "rating":
+            4,
+        "imagePath":
+            "/static/image/testimonial/testimonial_3.avif"
+    }
+]

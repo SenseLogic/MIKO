@@ -1,0 +1,102 @@
+// -- IMPORTS
+
+import { getLocalizedText } from "senselogic-lingo";
+import FooterMenu from "./footer-menu.marko";
+import HeaderMenu from "./header-menu.marko";
+import type { PageViewData } from "../lib/application_data";
+
+// -- TYPES
+
+export interface Input {
+    pageData: PageViewData;
+}
+
+<let/recentPostArray=( input.pageData.blogPostArray ?? [] ).slice( 0, 3 )>
+
+<HeaderMenu pageData=input.pageData/>
+<div class="blog-page">
+    <section class="blog-page-hero">
+        <div class="blog-page-hero-container">
+            <h1 class="blog-page-hero-title">
+                ${getLocalizedText( input.pageData.blogPage!.title, input.pageData.languageTag )}
+            </h1>
+            <p class="blog-page-hero-subtitle">
+                ${getLocalizedText( input.pageData.blogPage!.text, input.pageData.languageTag )}
+            </p>
+        </div>
+    </section>
+
+    <section class="blog-page-content">
+        <div class="blog-page-content-container">
+            <div class="blog-page-posts">
+                <for|blogPostItem| of=input.pageData.blogPostArray ?? []>
+                    <article class="blog-page-post">
+                        <div class="blog-page-post-image">
+                            <img
+                                src=blogPostItem.image
+                                alt=getLocalizedText( blogPostItem.title, input.pageData.languageTag )
+                                class="blog-page-post-img"
+                            >
+                        </div>
+                        <div class="blog-page-post-content">
+                            <div class="blog-page-post-meta">
+                                <span class="blog-page-post-category">
+                                    ${getLocalizedText( blogPostItem.category, input.pageData.languageTag )}
+                                </span>
+                                <span class="blog-page-post-date">${blogPostItem.date}</span>
+                            </div>
+                            <h2 class="blog-page-post-title">
+                                ${getLocalizedText( blogPostItem.title, input.pageData.languageTag )}
+                            </h2>
+                            <p class="blog-page-post-excerpt">
+                                ${getLocalizedText( blogPostItem.excerpt, input.pageData.languageTag )}
+                            </p>
+                            <div class="blog-page-post-footer">
+                                <span class="blog-page-post-author">By ${blogPostItem.author}</span>
+                                <a
+                                    href=`/${ input.pageData.languageTag }/blog/${ blogPostItem.id }`
+                                    class="blog-page-post-link"
+                                >Read More</a>
+                            </div>
+                        </div>
+                    </article>
+                </for>
+            </div>
+
+            <aside class="blog-page-sidebar">
+                <div class="blog-page-sidebar-section">
+                    <h3 class="blog-page-sidebar-title">Categories</h3>
+                    <ul class="blog-page-sidebar-list">
+                        <for|categoryItem| of=input.pageData.blogCategoryArray ?? []>
+                            <li class="blog-page-sidebar-item">
+                                <a
+                                    href=`/${ input.pageData.languageTag }/blog?category=${ categoryItem.slug }`
+                                    class="blog-page-sidebar-link"
+                                >
+                                    ${getLocalizedText( categoryItem.name, input.pageData.languageTag )}
+                                </a>
+                            </li>
+                        </for>
+                    </ul>
+                </div>
+
+                <div class="blog-page-sidebar-section">
+                    <h3 class="blog-page-sidebar-title">Recent Posts</h3>
+                    <ul class="blog-page-sidebar-list">
+                        <for|recentPostItem| of=recentPostArray>
+                            <li class="blog-page-sidebar-item">
+                                <a
+                                    href=`/${ input.pageData.languageTag }/blog/${ recentPostItem.id }`
+                                    class="blog-page-sidebar-link"
+                                >
+                                    ${getLocalizedText( recentPostItem.title, input.pageData.languageTag )}
+                                </a>
+                            </li>
+                        </for>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </section>
+</div>
+<FooterMenu pageData=input.pageData/>

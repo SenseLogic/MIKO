@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang=(
+    $global.data?.pageViewData?.languageTag
+    || $global.meta?.languageTag
+    || "en"
+    )>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/png" sizes="32x32" href="./favicon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Miko Project - Premium Footwear">
+        <title>${ $global.meta?.pageTitle || "Miko Project - Premium Footwear" }</title>
+        <link rel="stylesheet" href="/static/styles/main.css">
+    </head>
+    <body>
+        <${input.content}/>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+rename define_develop_environment_variables.bat.example define_develop_environment_variables.bat
+rename define_master_environment_variables.bat.example define_master_environment_variables.bat
+rename define_release_environment_variables.bat.example define_release_environment_variables.bat
+%TOOL%\FLEX\flex fix.flex
+pause

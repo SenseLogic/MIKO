@@ -1,0 +1,13 @@
+setx MIKO_PROJECT_BUNNY_STORAGE_KEY ""
+setx MIKO_PROJECT_BUNNY_STORAGE_NAME ""
+setx MIKO_PROJECT_BUNNY_STORAGE_URL ""
+setx MIKO_PROJECT_RESEND_EMAIL "contact@miko-project.com"
+setx MIKO_PROJECT_RESEND_KEY "re_xxx_xxx"
+setx MIKO_PROJECT_STRIPE_KEY "sk_live_xxx"
+setx MIKO_PROJECT_SUPABASE_DATABASE_HOST "db.xxx.supabase.co"
+setx MIKO_PROJECT_SUPABASE_DATABASE_KEY "xxx.xxx.xxx"
+setx MIKO_PROJECT_SUPABASE_DATABASE_PASSWORD "xxx"
+setx MIKO_PROJECT_SUPABASE_DATABASE_URL "https://xxx.supabase.co"
+setx MIKO_PROJECT_SUPABASE_STORAGE_NAME "xxx"
+setx MIKO_PROJECT_SUPABASE_STORAGE_URL "https://xxx.supabase.co/storage/v1/object/public"
+pause

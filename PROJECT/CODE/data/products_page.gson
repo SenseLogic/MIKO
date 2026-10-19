@@ -1,0 +1,32 @@
+{
+    "title":
+        ‴Products
+        ¨fr:Produits
+        ¨de:Produkte
+        ¨es:Productos
+        ¨pt:Produtos‴,
+    "text":
+        ‴Lorem ipsum
+        ¨fr:Lorem ipsum
+        ¨de:Lorem ipsum
+        ¨es:Lorem ipsum
+        ¨pt:Lorem ipsum‴,
+    "genderButton":
+        ‴Gender
+        ¨fr:Genre
+        ¨de:Geschlecht
+        ¨es:Género
+        ¨pt:Género‴,
+    "categoryButton":
+        ‴Category
+        ¨fr:Catégorie
+        ¨de:Kategorie
+        ¨es:Categoría
+        ¨pt:Categoria‴,
+    "brandButton":
+        ‴Brand
+        ¨fr:Marque
+        ¨de:Marke
+        ¨es:Marca
+        ¨pt:Marca‴
+}

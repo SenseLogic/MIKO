@@ -1,0 +1,29 @@
+// -- IMPORTS
+
+import { getLocalizedText } from "senselogic-lingo";
+import type { LanguageItem } from "../lib/application_data";
+
+// -- TYPES
+
+export interface Input {
+    languageTag: string;
+    languageByTagMap: Record<string, LanguageItem>;
+    pageUrlByLanguageTagMap: Record<string, string>;
+}
+
+<let/languageOptionArray=Object.entries( input.languageByTagMap )>
+
+<select
+    class="header-menu-language-select"
+    value=input.languageTag
+    valueChange( languageTagValue )
+    {
+            window.location.href = input.pageUrlByLanguageTagMap[ languageTagValue ];
+    }
+>
+    <for|[ optionLanguageTag, languageItem ]| of=languageOptionArray>
+        <option value=optionLanguageTag>
+            ${getLocalizedText( languageItem.name, input.languageTag )}
+        </option>
+    </for>
+</select>
